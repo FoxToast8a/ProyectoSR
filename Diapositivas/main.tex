@@ -1,4 +1,5 @@
 \documentclass[xcolor=dvipsnames,10pt]{beamer}
+
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{multirow,rotating}
@@ -63,7 +64,7 @@ Aqui una introduccion y resumen de lo que se hara
 \begin{frame}{Preliminares Topología Algebraica}
 
     \begin{block}{Definición}
-        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topologico $X$, se dice que son \textbf{camino homotopicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y ademas si exisste una funcion continua $F:[0,1]\times[0,1]\to X$ tal que
+        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topológico $X$, se dice que son \textbf{caminos homotopicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y además exisste una funcion continua $F:[0,1]\times[0,1]\to X$ tal que
         $$F(s,t)=\begin{cases}
         \gamma_1(s) & Si\,t=0,\\
         \gamma_2(s) & Si\,t=1,\\
@@ -78,25 +79,19 @@ Aqui una introduccion y resumen de lo que se hara
 \end{frame}
 \begin{frame}
     \begin{block}{Definición}
-        Dado $X$ espacio topologico y $x_0\in X$. El conjunto de clases de homotopia de caminos que inician y acaban en $x_0$, junto a la operacion de concatenar caminos lo llamamos el \textbf{grupo fundamental} de $X$ relativo a $x_0$ y que denotaremos por $\pi_1(X,x_0)$
+        Dado $X$ espacio topológico y $x_0\in X$. El conjunto de clases de homotopía de caminos cuyo punto inicial y final es $x_0$, junto a la operacion de concatenar caminos lo llamamos el \textbf{grupo fundamental} de $X$ relativo a $x_0$ y que denotaremos por $\pi_1(X,x_0)$
         \end{block}
 
         \begin{block}{Definición}
         Un espacio topológico $X$ se dice \textbf{simplemente conexo} si es arco-conexo y su grupo fundamental es el trivial.
-        \end{block}    
-\end{frame}
-\begin{frame}
-    \begin{block}{Definición}
-        Dado $X$ espacio topologico y $x_0\in X$. El conjunto de clases de homotopia de caminos que inician y acaban en $x_0$, junto a la operacion de concatenar caminos lo llamamos el \textbf{grupo fundamental} de $X$ relativo a $x_0$ y que denotaremos por $\pi_1(X,x_0)$
-        \end{block}
-
+        \end{block}  
         \begin{block}{Definición}
-        Un espacio topológico $X$ se dice \textbf{simplemente conexo} si es arco-conexo y su grupo fundamental es el trivial.
-        \end{block}    
+            Sean $X,Y$ espacios topológicos y $h: X \rightarrow Y$ una función contínua tal que $f(x_0) = y_0$, definimos $h_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)$, tal que $h_*([f]) = (h \circ f)$. Llamamos a $h_*$ el \textbf{homomorfismo inducido} por $h$.
+        \end{block}
 \end{frame}
 \begin{frame}
     \begin{block}{Definición}
-        Sea $p:E\to B$ una función continua y sobreyectiva. Dado un abierto $U$ de $B$ se dice que esta cubierto uniformemente por $p$ is la imagen inversa de $U$ por $p$ puede ser escrita como unión de abiertos disyuntos $V_\alpha$ en $E$, y la restricción de $p$ a cada uno de estos es un homeomorfismo.
+        Sea $p:E\to B$ una función contínua y sobreyectiva. Dado un abierto $U$ de $B$ se dice que esta cubierto uniformemente por $p$ is la imagen inversa de $U$ por $p$ puede ser escrita como unión de abiertos disyuntos $V_\alpha$ en $E$, y la restricción de $p$ a cada uno de estos es un homeomorfismo.
         \end{block} 
         \begin{figure}
             \centering
@@ -105,7 +100,7 @@ Aqui una introduccion y resumen de lo que se hara
 \end{frame}
 \begin{frame}
         \begin{block}{Definición}
-        Si para cada punto $b$ existe una vecindad $U$ tal que esta este cubuerta uniformemente se dice que $p$ es una funcion recubridora y que $E$ es el es \textbf{espacio recubridor}
+        Si para cada punto $b$ existe una vecindad $U$ tal que ésta esté cubierta uniformemente se dice que $p$ es una funcion recubridora y que $E$ es un \textbf{espacio recubridor}
         \end{block} 
         \begin{block}{Definición}
             Si el espacio recubridor $E$ es simplemente conexo se le llama el \textbf{cubrimiento universal}.
@@ -115,7 +110,7 @@ Aqui una introduccion y resumen de lo que se hara
 \end{frame}
 \begin{frame}{Teorema de Uniformizacion}
     \begin{block}{Teorema}
-        Sea $X$ una superficie de Riemann simplemente conexa, entonces $X$ es biholomorfica a exactamente una de las siguientes superficies
+        Sea $X$ una superficie de Riemann simplemente conexa, entonces $X$ es biholomorfa a exactamente una de las siguientes superficies
         \begin{itemize}
             \item La esfera de Riemann $\C_{\infty}.$
             \item El plano Complejo $\C.$
@@ -132,12 +127,40 @@ Aqui una introduccion y resumen de lo que se hara
     \begin{block}{Proposicion}
         Sea $X$ una superficie de Riemann. El cubrimiento universal de $X$ es biholomorfo a $\C$ si y solo si $X$ es biholomorfo a $\C,\C-\{0\}$ o $\C/L$
     \end{block}
-    Resulta que donde tendremos una mayor variedad son los cocientes de $\Hs^2$, pero antes de ver esto estudiaremos
+    Resulta que donde tendremos una mayor variedad son los cocientes de $\Hs^2$, antes de eso veremos la siguiente construcción
 \end{frame}
-\begin{frame}{Motivacion}
+\begin{frame}{Espacio de Teichmuller del Toro}
+    En general un espacio de Teichmüller asociado a una superficie sera el espacio de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
+    \vspace{0.5cm}
 
-    Esto lo escribe el serco
-    
+    Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmuller ocurre lo mismo, por lo que nuestro interés inicial sera estudiar estos espacios para los toros $\C/L$
+\end{frame}
+\begin{frame}{}
+    Recordemos que los retículos están determinados por una base de la forma $\{1,\tau\}$, donde $\tau\in \Hs^2$, por lo cual cualquier estructura compleja del toro viene determinada por un punto del plano hiperbólico. Sin embargo pueden existir $\tau, \tau' \in \Hs^2$ con $\tau \neq \tau'$ que resulten en dos estructuras biholomorfas.
+
+    \begin{block}{Proposición}
+        Sean $\C/L$ y $\C/L'$ dos toros determinados por $\tau$ y $\tau'$ respectivamente, entonces son biholomorfos si y solo si
+        \[
+            \tau' = \frac{a\tau + b}{c\tau + d}
+        \]
+        Con $a,b,c,d \in \Z$ y $ad-bc=1$
+    \end{block}
+
+    Esto quiere decir que las estructuras de superficie de Riemann del toro están determinadas por la acción de $\text{SL}(2,\Z)$ sobre $\Hs^2$
+\end{frame}
+\begin{frame}
+    Sea $\mathcal{M}_1 = \Hs^2/\text{SL}(2,\Z) = \Hs^2/\text{PSL}(2,\Z)$ queremos ver como es la topología de este cociente. \textcolor{red}{aqui van las imagenes esas pero me da pereza}\\ 
+    $\mathcal{M}_1$ se denomina el espacio de móduli del toro y $\mathcal{T}_1 = \Hs^2 $ es el espacio de Teichmüller
+
+\end{frame}
+\begin{frame}
+    Habiendo hecho esto, queremos generalizar éstos espacios a superficies de género más alto, vimos que fue sencillo construir los espacios de Teichmüller y móduli del toro debido a una particularidad muy especial, sin embargo, éstas particularidades pueden ser entendidas de otra manera, si tomamos $p_0 = [0] \in \C /L$, podemos ver que los segmentos $\overline{[0:1]}$ y $\overline{[0:\tau]}$ del plano complejo tienen asociados dos curvas cerradas que determinan dos generadores $[A_1],[B_\tau]$ de $\pi_1(\C /L,p_0)$. Ésta idea será la que nos ayudará a conseguir nuestro objetivo principal.  
+\end{frame}
+\begin{frame}{Marking}
+    \begin{block}{Definición}
+    Sea $X$ una superficie de género g y $p_0 \in X$, decimos que $\{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
+    \[ \prod_{i=1}^g [A_i,B_i] = e \]    
+    \end{block}
 \end{frame}
 \begin{frame}{Aplicaciones conformes y cuasiconformes}
 Sea $w=f(z)$ un homeomorfismo $C^1$ de una región a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que
@@ -155,15 +178,7 @@ De esta manera estas transformaciones envían círculos centrados en el origen e
 \begin{frame}{}
     Aqui va lo de mapas conformes pero me raye
 \end{frame}
-\begin{frame}{Espacio de Teichmuller del Toro}
-    En general un espacio de Teichmuller asociado a una superficie sera el espacio de de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
-    \vspace{0.5cm}
 
-    Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmuller ocurre lo mismo, por lo que nuestro interés inicial sera estudiar estos espacios para los toros $\C/L$
-\end{frame}
-\begin{frame}{}
-    Recordemos que los retículos están determinados por por una base de la forma $\{1,\tau\}$, donde $\tau\in \Hs^2$, 
-\end{frame}
 
 
 
