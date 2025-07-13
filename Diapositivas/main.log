@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.19)  10 JUL 2025 23:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.19)  12 JUL 2025 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1682,6 +1682,19 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 
 ]
 
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{frame}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+
 [13
 
 ]
@@ -1718,13 +1731,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 35115 strings out of 468225
- 758697 string characters out of 5427613
+ 35118 strings out of 468225
+ 758730 string characters out of 5427613
  1081447 words of memory out of 5000000
  62907 multiletter control sequences out of 15000+600000
- 710748 words of font info for 98 fonts, out of 8000000 for 9000
+ 711554 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,123p,678b,1080s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,123p,945b,1080s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
 ibertine/LinLibertineT.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Sergio Alejandro
@@ -1733,14 +1746,15 @@ KTeX/fonts/type1/public/libertine/LinLibertineTB.pfb><C:/Users/Sergio Alejandro
 rier/fourier-bb.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKTeX/fo
 nts/type1/public/fourier/fourier-mcl.pfb><C:/Users/Sergio Alejandro/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/Sergio 
-Alejandro/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-mlit
-.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/fourier/fourier-ms.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKT
-eX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Sergio Alejandro/AppData/Local
-/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (16 pages, 462036 bytes).
+Alejandro/AppData/Local/Programs/MiKTeX/fonts/type1/public/fourier/fourier-ml.p
+fb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+fourier/fourier-mlit.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Sergio Alejandro/AppData
+/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Sergio Ale
+jandro/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on main.pdf (16 pages, 468081 bytes).
 PDF statistics:
- 671 PDF objects out of 1000 (max. 8388607)
+ 676 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
  527 words of extra memory for PDF output out of 10000 (max. 10000000)
 

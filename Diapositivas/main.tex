@@ -86,7 +86,7 @@ Aqui una introduccion y resumen de lo que se hara
         Un espacio topológico $X$ se dice \textbf{simplemente conexo} si es arco-conexo y su grupo fundamental es el trivial.
         \end{block}  
         \begin{block}{Definición}
-            Sean $X,Y$ espacios topológicos y $h: X \rightarrow Y$ una función contínua tal que $f(x_0) = y_0$, definimos $h_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)$, tal que $h_*([f]) = (h \circ f)$. Llamamos a $h_*$ el \textbf{homomorfismo inducido} por $h$.
+            Sean $X,Y$ espacios topológicos y $h: X \rightarrow Y$ una función contínua tal que $f(x_0) = y_0$, definimos $h_*:\pi_1(X,x_0)\rightarrow \pi_1(Y,y_0)$, tal que $h_*([f]) = [(h \circ f)]$. Llamamos a $h_*$ el \textbf{homomorfismo inducido} por $h$.
         \end{block}
 \end{frame}
 \begin{frame}
@@ -154,12 +154,22 @@ Aqui una introduccion y resumen de lo que se hara
 
 \end{frame}
 \begin{frame}
-    Habiendo hecho esto, queremos generalizar éstos espacios a superficies de género más alto, vimos que fue sencillo construir los espacios de Teichmüller y móduli del toro debido a una particularidad muy especial, sin embargo, éstas particularidades pueden ser entendidas de otra manera, si tomamos $p_0 = [0] \in \C /L$, podemos ver que los segmentos $\overline{[0:1]}$ y $\overline{[0:\tau]}$ del plano complejo tienen asociados dos curvas cerradas que determinan dos generadores $[A_1],[B_\tau]$ de $\pi_1(\C /L,p_0)$. Ésta idea será la que nos ayudará a conseguir nuestro objetivo principal.  
+    Habiendo hecho esto, queremos generalizar éstos espacios a superficies de género más alto, vimos que fue sencillo construir los espacios de Teichmüller y móduli del toro debido a una particularidad muy especial, sin embargo, éstas particularidades pueden ser entendidas de otra manera, si tomamos $p_0 = [0] \in \C /L$, podemos ver que los segmentos $\overline{[0:1]}$ y $\overline{[0:\tau]}$ del plano complejo tienen asociados dos caminos cerrados que determinan dos generadores $[A_\tau],[B_\tau]$ de $\pi_1(\C /L,p_0)$, si además, tenemos $f: \C/L \rightarrow \C/L'$ un biholorfismo, el homomorfismo inducido $f_*: \pi_1(\C/L,p_0) \rightarrow \pi_1(\C/L', p_0)$ no necesariamente envía $[A_\tau],[B_\tau]$ a $[A_{\tau'}],[B_{\tau'}]$, de hecho ésto solo ocurre si $\tau = \tau'$. Ésta idea será la que nos ayudará a conseguir nuestro objetivo principal.  
 \end{frame}
 \begin{frame}{Marking}
     \begin{block}{Definición}
-    Sea $X$ una superficie de género g y $p_0 \in X$, decimos que $\{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
-    \[ \prod_{i=1}^g [A_i,B_i] = e \]    
+    \begin{itemize}
+        Sea $X$ una superficie de Riemann cerrada género g, 
+        \item decimos que 
+        $\Sigma_g = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
+    \[ \prod_{i=1}^g [A_i,B_i] = e \]
+        \item Un \textit{marking} en $X$ es un sistema canónico de generadores $\Sigma_p \subset \pi_1(X,p)$
+        \item Dos markings $\Sigma_p$ y $\Sigma'_{p'}$ se dicen  \textbf{equivalentes} si existe una curva contínua $\alpha$ entre $p$ y $p'$, tal que el isomorfismo inducido $T_\alpha: \pi_1(X,p) \rightarrow \pi_1(X,p')$ satisface
+        \[
+        T_\alpha(\Sigma_p) = \Sigma_p'
+        \]
+    \end{itemize}
+    Al par $(X,\Sigma_p)$ lo llamamos \textbf{superficie de Riemann marcada} 
     \end{block}
 \end{frame}
 \begin{frame}{Aplicaciones conformes y cuasiconformes}
