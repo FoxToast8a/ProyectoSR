@@ -237,6 +237,7 @@ donde $z=x+iy$ y $w=u+iv.$ Geometricamente  estos representan transformaciones a
 $(du,dv).$\\
 
 De esta manera estas transformaciones envían círculos centrados en el origen en elipses similares, es de nuestro interés ver la razón entre los ejes y como cambia su dirección.    
+<<<<<<< HEAD
 \end{frame}
 
 \begin{frame}
@@ -285,6 +286,52 @@ Resulta mas conveniente considerar
     Si $\{(U_\alpha,w_\alpha)\}$ es un atlas en $X$ y $f:R\rightarrow X$ es un difeomorfismo que preserva la orientación, la colección $\{(f^{-1}(V_\alpha),w_\alpha \circ f)\}$ es tambien un atlas en $R$, 
     
 \end{frame}
+=======
+\end{frame}
+
+\begin{frame}
+    Observemos ahora si que podemos escribir
+    \begin{align*}
+        f_z&=\frac{1}{2}(u_x+u_y)+\frac{i}{2}(v_x-u_y),\\
+        f_{\overline{z}}&=\frac{1}{2}(u_x-v_y)+\frac{i}{2}(v_x+u_y).
+    \end{align*}
+    Con esto podemos notamos
+    $$|f_z|^2-|f_{\overline{z}}|^2=u_xv_y-u_yv_x=J.$$
+    Donde $J$ es el Jacobiano de la transformación. Como solo estamos considerando las aplicaciones que preservan la orientación, el Jacobiano es positivo, luego $|f_{\overline{z}}|<|f_z|$, de esto se sigue que
+    $$(|f_z|-|f_{\overline{z}}|)|dz|\leq |dw|\leq (|f_z|+|f_{\overline{z}}|)|dz|.$$
+    Donde ambos extremos de la desigualdad se alcanzan, asi obtenemos que la razon esta dada por
+    $$D_f=\frac{|f_z|+|f_{\overline{z}}|}{|f_z|-|f_{\overline{z}}|}\geq 1.$$
+    Esto se conoce como la \textbf{dilatación} en el punto $z$.
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Definición}
+        La aplicación $f$ se dice \textbf{cuasiconforme} si $D_f$ es acotada.
+        \end{block}
+        Particularmente obtenemos que
+\begin{block}{Proposición}
+Si $D_f=1$ tenemos que $f$ es una aplicación \textbf{conforme}.
+\end{block}
+Resulta mas conveniente considerar
+    $$d_f=\frac{|f_{\overline{z}}|}{|f_z|}<1,$$
+    que se relaciona con $D_f$ tal que
+    $$D_f=\frac{1+d_f}{1-d_f}.$$
+\end{frame}
+\begin{frame}
+    \begin{block}{Definición}
+        La \text{dilatación compleja} esta dada por
+        $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
+        LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
+    \end{block}
+    \textcolor{red}{aqui el dibujo del imayoshi tengo sueño}
+\end{frame}
+
+\begin{frame}{Relacion con el espacio de Teichmuller}
+    Consideremos $(R,f)\in\mathcal{T}(X)$, es de nuestro interes comparar la estructura compleja de $R$ y $X$, para esto tomamos una vecindad $U$ y una coordenada local $z$ en $R$, de manera similar $V$ vecindad y $w$ coordenada local en $X.$ Si consideramos $F=w\circ f\circ z^{-1}$ entonces 
+    $$\mu_F=\frac{F_{\overline{z}}}{F_z},$$
+    es una función suave de valor complejo y ademas no depende de la coordenada local $w.$
+\end{frame}
+>>>>>>> 158a6f6389349e79caab85ca04f1bb164ac18aa8
 \begin{frame}{Referencias}
 
 \end{frame}
