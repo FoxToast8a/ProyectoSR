@@ -135,7 +135,7 @@ Aqui una introduccion y resumen de lo que se hara
 
     Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmuller ocurre lo mismo, por lo que nuestro interés inicial sera estudiar estos espacios para los toros $\C/L$
 \end{frame}
-\begin{frame}{}
+\begin{frame}
     Recordemos que los retículos están determinados por una base de la forma $\{1,\tau\}$, donde $\tau\in \Hs^2$, por lo cual cualquier estructura compleja del toro viene determinada por un punto del plano hiperbólico. Sin embargo pueden existir $\tau, \tau' \in \Hs^2$ con $\tau \neq \tau'$ que resulten en dos estructuras biholomorfas.
 
     \begin{block}{Proposición}
@@ -158,41 +158,133 @@ Aqui una introduccion y resumen de lo que se hara
 \end{frame}
 \begin{frame}{Marking}
     \begin{block}{Definición}
-    \begin{itemize}
-        Sea $X$ una superficie de Riemann cerrada género g, 
-        \item decimos que 
-        $\Sigma_g = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
+        Sea $X$ una superficie de Riemann cerrada género g,  decimos que $\Sigma_g = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
     \[ \prod_{i=1}^g [A_i,B_i] = e \]
+    \begin{itemize}
         \item Un \textit{marking} en $X$ es un sistema canónico de generadores $\Sigma_p \subset \pi_1(X,p)$
-        \item Dos markings $\Sigma_p$ y $\Sigma'_{p'}$ se dicen  \textbf{equivalentes} si existe una curva contínua $\alpha$ entre $p$ y $p'$, tal que el isomorfismo inducido $T_\alpha: \pi_1(X,p) \rightarrow \pi_1(X,p')$ satisface
+        \item Dos markings $\Sigma_p$ y $\Sigma_{p'}^\prime$ se dicen  \textbf{equivalentes} si existe una curva contínua $\alpha$ entre $p$ y $p'$, tal que el isomorfismo inducido $T_\alpha: \pi_1(X,p) \rightarrow \pi_1(X,p')$ satisface
         \[
         T_\alpha(\Sigma_p) = \Sigma_p'
         \]
     \end{itemize}
     Al par $(X,\Sigma_p)$ lo llamamos \textbf{superficie de Riemann marcada} 
     \end{block}
-\end{frame}
+    \end{frame}
+
+    \begin{frame}
+        Entonces siguiendo la construcción hecha para el Toro el espacio de Teichmuller de una superficie $X$ cerrada, es el conjunto de las superficies marcadas que son difeomorfas a $X$ modulo equivalencia.\\
+        \vspace{0.3cm}
+        Con esto tenemos una caracterización del espacio de Teichmuller, pero no nos da información sobre su topología, asi es como introducimos el \textit{Marking por difeomorfismos.} 
+    \end{frame}
+    \begin{frame}
+        \begin{block}{Definición}
+            Sean $R$ y $R^\prime$ superficies de Riemann, definamos
+            \begin{align*}
+                 f:X\to R\,\text{  y  }\,f^\prime:X\to R^\prime,
+             \end{align*} 
+             como difeomorfismos que preservan la orientación. Decimos que las parejas $(R,f)$ y $(R^\prime,f^\prime)$ son equivalentes si existe un biholomorfismo $h:R\to R^\prime$ tal que
+             $$(f^\prime)^{-1}\circ h\circ f:X\to X,$$
+             es homotopico a la identidad.
+        \end{block}
+        \textbf{Observación:} Si escogemos un conjunto de generadores $\Sigma$ para el grupo fundamental $\pi_1(X,p)$, entonces cada pareja $(R,f)$ define un punto
+        $$(R,f_{*}(\Sigma))\in \mathcal{T}.$$
+        Donde $\mathcal{T}$ es el espacio de Teichmuller de $X.$
+        
+    \end{frame}
+    \begin{frame}
+        La definición anterior nos brinda una nueva descripción del espacio de Teichmuller de una superficie $X.$
+        $$\mathcal{T}(X)=\left\{(R, f): \begin{array}{c}R \text{ es una superficie de Riemann }, f: X \rightarrow R \\ \text{ un difeomorfismo que preserva la orientación }\end{array}\right\} / \sim.$$
+        Con esta nueva descripción sera mucho mas sencillo describir el espacio de Moduli, con lo que llamaremos \textit{Mapping class group.}
+    \end{frame}
+
+    \begin{frame}{Mapping class group}
+        Sea $X$ una superficie de Riemann cerrada. Definimos
+        $$Diff^+(X)=\left\{f:X\to X| f \text{ es un difeomorfismo que preserva la orientación }\right\},$$
+        y
+        $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotopico a la identidad}\right\}.$$
+        Podemos notar que $Diff^+(X)$ es un grupo y que $Diff^+_0(X)$ es un subgrupo normal de $Diff^+(X).$ Con lo cual 
+        \begin{block}{Definición}
+            El \textbf{Mapping class group} de una superficie de riemann cerrada $X$ es
+            $$MCG(X):=Diff^+(X)/Diff^+_0(X).$$
+        \end{block}
+        
+    \end{frame}
+    \begin{frame}{Espacio de Moduli}
+        El \textit{Mappin class group} actua sobre el espacio de Teichmuller de la siguiente manera:
+        $$[g]\cdot[(R,f)]=[(R,f\circ g^{-1})].$$
+        El cociente de el espacio de Teicchmuller por esta acción es lo que llamaremos espacio de Moduli, es decir
+        \begin{block}{Definición}
+            El \textbf{espacio de Moduli} de una superficie de Riemann cerrada $X$ es
+            $$\mathcal{M}(X)=\mathcal{T}(X)/MCG(X).$$
+        \end{block}
+        Si $X$ es una superficie cerrada de genero $g$, se suele denotar $\mathcal{T}(X)=\mathcal{T}_g$ y $\mathcal{M}(X)=\mathcal{M}_g$
+    \end{frame}
+    \begin{frame}
+        Ya hemos construido los espacios de Teichmuller y Moduli para las superficies cerradas de genero $g$. Sabemos que estos espacios nos dan información sobre las estructuras complejas de estas superficies, pero ahora queremos saber que relación guarda una estructura con otra. De estudiar este problema es donde aparecen las \textbf{aplicaciones cuasiconformes}.
+    \end{frame}
+
+    
+
 \begin{frame}{Aplicaciones conformes y cuasiconformes}
 Sea $w=f(z)$ un homeomorfismo $C^1$ de una región a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que
 \begin{align*}
     du&=u_xdx+u_ydy,\\
     dv&=v_xdx+v_ydy.\\
 \end{align*}
-Donde $z=x+iy$ y $w=u+iv,$ Estos también se pueden ver de manera compleja pero concentremonos en que geometricamente  estos representan transfromaciones afines del plano $(dx,dy)$ al plano
+Estos también se pueden ver de manera compleja como
+$$dw=f_zdz+f_{\overline{z}}d\overline{z},$$
+donde $z=x+iy$ y $w=u+iv.$ Geometricamente  estos representan transformaciones afines del plano $(dx,dy)$ al plano
 $(du,dv).$\\
 
-De esta manera estas transformaciones envían círculos centrados en el origen en elipses similares, es de nuestro interes ver la razón entre los ejes y como cambia su dirección.  
+De esta manera estas transformaciones envían círculos centrados en el origen en elipses similares, es de nuestro interés ver la razón entre los ejes y como cambia su dirección.    
+\end{frame}
+
+\begin{frame}
+    Observemos ahora si que podemos escribir
+    \begin{align*}
+        f_z&=\frac{1}{2}(u_x+u_y)+\frac{i}{2}(v_x-u_y),\\
+        f_{\overline{z}}&=\frac{1}{2}(u_x-v_y)+\frac{i}{2}(v_x+u_y).
+    \end{align*}
+    Con esto podemos notamos
+    $$|f_z|^2-|f_{\overline{z}}|^2=u_xv_y-u_yv_x=J.$$
+    Donde $J$ es el Jacobiano de la transformación. Como solo estamos considerando las aplicaciones que preservan la orientación, el Jacobiano es positivo, luego $|f_{\overline{z}}|<|f_z|$, de esto se sigue que
+    $$(|f_z|-|f_{\overline{z}}|)|dz|\leq |dw|\leq (|f_z|+|f_{\overline{z}}|)|dz|.$$
+    Donde ambos extremos de la desigualdad se alcanzan, asi obtenemos que la razon esta dada por
+    $$D_f=\frac{|f_z|+|f_{\overline{z}}|}{|f_z|-|f_{\overline{z}}|}\geq 1.$$
+    Esto se conoce como la \textbf{dilatación} en el punto $z$.
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Definición}
+        La aplicación $f$ se dice \textbf{cuasiconforme} si $D_f$ es acotada.
+        \end{block}
+        Particularmente obtenemos que
+\begin{block}{Proposición}
+Si $D_f=1$ tenemos que $f$ es una aplicación \textbf{conforme}.
+\end{block}
+Resulta mas conveniente considerar
+    $$d_f=\frac{|f_{\overline{z}}|}{|f_z|}<1,$$
+    que se relaciona con $D_f$ tal que
+    $$D_f=\frac{1+d_f}{1-d_f}.$$
+\end{frame}
+\begin{frame}
+    \begin{block}{Definición}
+        La \text{dilatación compleja} esta dada por
+        $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
+        LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
+    \end{block}
+    \textcolor{red}{aqui el dibujo del imayoshi tengo sueño}
+\end{frame}
+
+\begin{frame}{Relacion con el espacio de Teichmuller}
+    Consideremos $[(R,f)]\in\mathcal{T}(X)$, es de nuestro interes comparar la estructura compleja de $R$ y $X$, para esto tomamos una vecindad $U$ y una coordenada local $z$ en $R$, de manera similar $V$ vecindad y $w$ coordenada local en $X.$ Si consideramos $F=w\circ f\circ z^{-1}$ entonces 
+    $$\mu_F=\frac{F_{\overline{z}}}{F_z},$$
+    es una función suave de valor complejo y ademas no depende de la coordenada local $w.$ Además $\mu_F$ cumple todas las condiciones de un coeficiente de Beltrami.
+\end{frame}
+\begin{frame}
+    Si $\{(U_\alpha,w_\alpha)\}$ es un atlas en $X$ y $f:R\rightarrow X$ es un difeomorfismo que preserva la orientación, la colección $\{(f^{-1}(V_\alpha),w_\alpha \circ f)\}$ es tambien un atlas en $R$, 
     
 \end{frame}
-
-\begin{frame}{}
-    Aqui va lo de mapas conformes pero me raye
-\end{frame}
-
-
-
-
-
 \begin{frame}{Referencias}
 
 \end{frame}
