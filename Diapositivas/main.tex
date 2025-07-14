@@ -57,13 +57,13 @@ Edgar Santiago Ochoa Quiroga}
 \begin{document}
 \maketitle
 \begin{frame}{Introducción}
-    Uno de los problemas principales en el estudio de las superficies de Riemann es su clasificación, en particular hemos visto que una misma superficie puede tener dos estructuras complejas completamente diferentes, por lo que nos interesamos en caracterizar todas estas estructuras. A partir de este problema surgen los espacios de Moduli y Teichmüller, que por su estructura ayudan a clasificar todas las posibles estructuras complejas de una superficie dada. Nuestro propósito es hacer una breve introducción a éstos espacios, incluyendo algunas construcciones elementales.
+    Uno de los problemas principales en el estudio de las superficies de Riemann es su clasificación, en particular hemos visto que una misma superficie puede tener dos estructuras complejas completamente diferentes, por lo que nos interesamos en caracterizarlas todas. A partir de este problema surgen los espacios de Moduli y Teichmüller, que nos ayudan a clasificar todas las posibles estructuras complejas de una superficie dada. Nuestro propósito es hacer una breve introducción a éstos espacios, incluyendo algunas construcciones elementales.
 
 \end{frame}
 \begin{frame}{Preliminares Topología Algebraica}
 
     \begin{block}{Definición}
-        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topológico $X$, se dice que son \textbf{caminos homotopicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y además existe una funcion continua $F:[0,1]\times[0,1]\to X$ tal que
+        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topológico $X$, se dice que son \textbf{caminos homotópicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y además existe una función contínua $F:[0,1]\times[0,1]\to X$ tal que
         $$F(s,t)=\begin{cases}
         \gamma_1(s) & Si\,t=0,\\
         \gamma_2(s) & Si\,t=1,\\
@@ -78,7 +78,7 @@ Edgar Santiago Ochoa Quiroga}
 \end{frame}
 \begin{frame}
     \begin{block}{Definición}
-        Dado $X$ espacio topológico y $x_0\in X$. El conjunto de clases de homotopía de caminos cuyo punto inicial y final es $x_0$, junto a la operacion de concatenar caminos lo llamamos el \textbf{grupo fundamental} de $X$ relativo a $x_0$ y que denotaremos por $\pi_1(X,x_0)$
+        Dado $X$ espacio topológico y $x_0\in X$. El conjunto de clases de homotopía de caminos cuyo punto inicial y final es $x_0$, junto a la operacion de concatenar caminos lo llamamos el \textbf{grupo fundamental} de $X$ relativo a $x_0$ y lo denotaremos por $\pi_1(X,x_0)$
         \end{block}
 
         \begin{block}{Definición}
@@ -104,7 +104,6 @@ Edgar Santiago Ochoa Quiroga}
         \begin{block}{Definición}
             Si el espacio recubridor $E$ es simplemente conexo se le llama el \textbf{cubrimiento universal}.
         \end{block}
-        Al referirnos al cubrimiento universal de un espacio $X$ lo denotaremos por $\tilde{X}.$
         
 \end{frame}
 \begin{frame}{Teorema de Uniformizacion}
@@ -116,7 +115,7 @@ Edgar Santiago Ochoa Quiroga}
             \item El semiplano superior $\Hs^2.$
         \end{itemize}
     \end{block}
-    \textbf{Observación:} Note que a el cubrimiento universal lo podemos dotar de una estructura de superficie Riemann a partir de la de $X$, por lo que podemos pensar a las superficies de Riemann como cocientes de su cubrimiento universal.  
+    \textbf{Observación:} Note que al cubrimiento universal lo podemos dotar de una estructura de superficie Riemann a partir de la de $X$, por lo que podemos pensar a las superficies de Riemann como cocientes de su cubrimiento universal.  
 \end{frame}
 \begin{frame}{Cocientes de superficies}
     En vista de lo anterior, lo natural seria pensar en las superficies de Riemann simplemente conexas y ver su posibles cocientes, pero resulta que para la esfera de Riemann y el plano complejo tenemos poca variedad
@@ -138,7 +137,7 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
     
 \end{frame}
 \begin{frame}{Espacio de Teichmüller del Toro}
-    En general un espacio de Teichmüller asociado a una superficie sera el espacio de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
+    En general un espacio de Teichmüller asociado a una superficie será el espacio de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
     \vspace{0.5cm}
 
     Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmüller ocurre lo mismo, por lo que nuestro interés inicial será estudiar estos espacios para los toros $\C/L$
@@ -170,9 +169,10 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
     
 \end{frame}
 \begin{frame}
-    Note que dado $\tau\in\Hs^2$ existe $g\in \text{PSL}(2,\Z)$ tal que $g\tau\in\mathcal{F}.$ Esto se tiene ya que dado tal $g$ un calculo nos muestra que
+    Note que dado $\tau\in\Hs^2$ existe $g\in \text{PSL}(2,\Z)$ tal que $g\tau\in\mathcal{F}.$ Observe que
     $$\text{Im}(gz)=\frac{\text{Im}(z)}{|cz+d|^2},$$
-    Podemos tomar $g$ tal que $\text{Im}(g\tau)$ es maximal y de hecho es maximo. Luego podemos trasladar por medio de $z\to z+1$ hasta que $|\text{Re}(g\tau)|\leq \dfrac{1}{2}.$ Si $|g\tau|<1$ entonces $\left|\dfrac{1}{g\tau}\right|>1$ y eso contradice la maximalidad de la parte imaginaria.\\
+    Podemos tomar $g$ tal que $\text{Im}(g\tau)$ es maximal y de hecho es maximo. Luego podemos trasladar por medio de $z\to z+1$ hasta que $|\text{Re}(g\tau)|\leq \dfrac{1}{2}.$ Si $|g\tau|<1$ entonces $\left|\dfrac{-1}{g\tau}\right|>1$ y eso contradice la maximalidad de la parte imaginaria.\\
+    \vspace{0.2cm}
     Podemos ver que
     \begin{itemize}
         \item Si $\tau\in \text{Int}(\mathcal{F})$ entonces $O(\tau)\cap\mathcal{F}=\{\tau\}.$ 
@@ -205,7 +205,7 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
 \end{frame}
 \begin{frame}{Marking}
     \begin{block}{Definición}
-        Sea $X$ una superficie de Riemann cerrada género g,  decimos que $\Sigma_g = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si
+        Sea $X$ una superficie de Riemann cerrada de género g,  decimos que $\Sigma_p = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p)$ si
     \[ \prod_{i=1}^g [A_i,B_i] = e \]
     \begin{itemize}
         \item Un \textit{marking} en $X$ es un sistema canónico de generadores $\Sigma_p \subset \pi_1(X,p)$
@@ -219,7 +219,8 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
     \end{frame}
 
     \begin{frame}
-        Entonces siguiendo la construcción hecha para el Toro el espacio de Teichmuller de una superficie $X$ cerrada, es el conjunto de las superficies marcadas que son difeomorfas a $X$ módulo equivalencia.\\
+        Entonces siguiendo la construcción hecha para el Toro, el espacio de Teichmüller de una superficie $X$ cerrada es el conjunto de las superficies marcadas que son difeomorfas a $X$, módulo equivalencia.
+          $$\mathcal{T}(X)=\left\{(R, \Sigma_p): \begin{array}{c}R \text{ es una superficie de Riemann difeomorfa a }X  \\ p\in R,\ \Sigma_p\text{ un marking en } R\end{array}\right\} / \sim.$$\\
         \vspace{0.3cm}
         Con esto tenemos una caracterización del espacio de Teichmüller, pero no nos da información sobre su topología, por tanto introducimos el \textit{Marking por difeomorfismos.} 
     \end{frame}
@@ -231,7 +232,7 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
              \end{align*} 
              como difeomorfismos que preservan la orientación. Decimos que las parejas $(R,f)$ y $(R^\prime,f^\prime)$ son equivalentes si existe un biholomorfismo $h:R\to R^\prime$ tal que
              $$(f^\prime)^{-1}\circ h\circ f:X\to X,$$
-             es homotopico a la identidad.
+             es homotópico a la identidad.
         \end{block}
         \textbf{Observación:} Si escogemos un conjunto de generadores $\Sigma$ para el grupo fundamental $\pi_1(X,p)$, entonces cada pareja $(R,f)$ define un punto
         $$(R,f_{*}(\Sigma))\in \mathcal{T}.$$
@@ -246,12 +247,12 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
 
     \begin{frame}{Mapping class group}
         Sea $X$ una superficie de Riemann cerrada. Definimos
-        $$Diff^+(X)=\left\{f:X\to X| f \text{ es un difeomorfismo que preserva la orientación }\right\},$$
+        $$Diff^+(X)=\left\{f:X\to X\ |\ f \text{ es un difeomorfismo que preserva la orientación }\right\},$$
         y
         $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotópico a la identidad}\right\}.$$
         Podemos notar que $Diff^+(X)$ es un grupo y que $Diff^+_0(X)$ es un subgrupo normal de $Diff^+(X).$ Con lo cual 
         \begin{block}{Definición}
-            El \textbf{Mapping class group} de una superficie de riemann cerrada $X$ es
+            El \textbf{Mapping class group} de una superficie de Riemann cerrada $X$ es
             $$\text{MCG}(X):=Diff^+(X)/Diff^+_0(X).$$
         \end{block}
         
@@ -267,20 +268,20 @@ además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente e
         Si $X$ es una superficie cerrada de genero $g$, se suele denotar $\mathcal{T}(X)=\mathcal{T}_g$ y $\mathcal{M}(X)=\mathcal{M}_g$
     \end{frame}
     \begin{frame}
-        Ya hemos construido los espacios de Teichmuller y Moduli para las superficies cerradas de genero $g$. Sabemos que estos espacios nos dan información sobre las estructuras complejas de estas superficies, pero ahora queremos saber que relación guarda una estructura con otra. De estudiar este problema es donde aparecen las \textbf{aplicaciones cuasiconformes}.
+        Ya hemos construido los espacios de Teichmüller y Moduli para las superficies cerradas de género $g$. Sabemos que éstos espacios nos dan información sobre las estructuras complejas de estas superficies, pero ahora queremos saber que relación guarda una estructura con otra. De estudiar este problema es donde aparecen las \textbf{aplicaciones cuasiconformes}.
     \end{frame}
 
     
 
 \begin{frame}{Aplicaciones conformes y cuasiconformes}
-Sea $w=f(z)$ un homeomorfismo $C^1$ de una región del plano complejo a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que
+Sea $w=f(z)$ un homeomorfismo $C^1$ de una región del plano complejo a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que\\
 \begin{align*}
     du&=u_xdx+u_ydy,\\
     dv&=v_xdx+v_ydy.\\
 \end{align*}
 Estos también se pueden ver de manera compleja como
 $$dw=f_zdz+f_{\overline{z}}d\overline{z},$$
-donde $z=x+iy$ y $w=u+iv.$ Geometricamente  estos representan transformaciones afines del plano $(dx,dy)$ al plano
+donde $z=x+iy$ y $w=u+iv.$ Geométricamente  estos representan transformaciones afines del plano $(dx,dy)$ al plano
 $(du,dv).$\\
 
 De esta manera estas transformaciones envían círculos centrados en el origen en elipses similares, es de nuestro interés ver la razón entre los ejes y como cambia su dirección.    
@@ -288,12 +289,12 @@ De esta manera estas transformaciones envían círculos centrados en el origen e
 \end{frame}
 
 \begin{frame}
-    Observemos ahora si que podemos escribir
+    Observemos ahora que podemos escribir
     \begin{align*}
         f_z&=\frac{1}{2}(u_x+u_y)+\frac{i}{2}(v_x-u_y),\\
         f_{\overline{z}}&=\frac{1}{2}(u_x-v_y)+\frac{i}{2}(v_x+u_y).
     \end{align*}
-    Con esto podemos notamos
+    Con esto notamos que
     $$|f_z|^2-|f_{\overline{z}}|^2=u_xv_y-u_yv_x=J.$$
     Donde $J$ es el Jacobiano de la transformación. Como solo estamos considerando las aplicaciones que preservan la orientación, el Jacobiano es positivo, luego $|f_{\overline{z}}|<|f_z|$, de esto se sigue que
     $$(|f_z|-|f_{\overline{z}}|)|dz|\leq |dw|\leq (|f_z|+|f_{\overline{z}}|)|dz|.$$
@@ -335,7 +336,7 @@ Resulta mas conveniente considerar
 \begin{frame}
     Si $\{(U_\alpha,w_\alpha)\}$ es un atlas en $X$ y $f:R\rightarrow X$ es un difeomorfismo que preserva la orientación, la colección $\{(f^{-1}(V_\alpha),w_\alpha \circ f)\}$ es tambien un atlas en $R$. En este sentido tenemos una nueva superficie de Riemann $R_f$ con el sistema de coordenadas dado previamente.\\
     \vspace{0.3cm}
-    Podemos notar que la función identidad de $R$ a $R_f$ es un difeomorfismo que preserva la orientación. Luego tomando $f:R_f\to X$, este es un biholomorfismo, por lo que $(X,f)=(R_f,id),$ entonces el coeficiente de Beltrami $\mu_F$ nos dice que tanto hay que deformar una superficie en otra para obtener su estructura compleja. Asi podemos construir el espacio de Teichmuller a partir de los coeficientes de Beltrami.
+    Podemos notar que la función identidad de $R$ a $R_f$ es un difeomorfismo que preserva la orientación. Luego tomando $f:R_f\to X$, este es un biholomorfismo, por lo que $(X,f)=(R_f,id),$ entonces el coeficiente de Beltrami $\mu_F$ nos dice que tanto hay qué deformar una superficie en otra para obtener su estructura compleja. Asi podemos construir el espacio de Teichmüller a partir de los coeficientes de Beltrami.
 \end{frame}
 \begin{frame}{Espacios de coeficientes de Beltrami}
 

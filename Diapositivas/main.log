@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.19)  13 JUL 2025 22:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.6.19)  14 JUL 2025 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1673,16 +1673,16 @@ t line 99.
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.6pt on input line 139.
+(Font)              scaled to size 7.6pt on input line 138.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 139.
+(Font)              scaled to size 6.0pt on input line 138.
 
 
 [9
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 10.0pt on input line 145.
+(Font)              scaled to size 10.0pt on input line 144.
 
 
 [10
@@ -1696,7 +1696,7 @@ ine/lbtn_7grukw.enc}]
 <Imagenes/FunDom.png, id=487, 412.54124pt x 288.3272pt>
 File: Imagenes/FunDom.png Graphic file (type png)
 <use Imagenes/FunDom.png>
-Package pdftex.def Info: Imagenes/FunDom.png  used on input line 171.
+Package pdftex.def Info: Imagenes/FunDom.png  used on input line 170.
 (pdftex.def)             Requested size: 137.678pt x 96.22174pt.
 
 
@@ -1770,7 +1770,7 @@ Package pdftex.def Info: Imagenes/Marking.png  used on input line 205.
 <Imagenes/Semieje.png, id=963, 731.73375pt x 417.05812pt>
 File: Imagenes/Semieje.png Graphic file (type png)
 <use Imagenes/Semieje.png>
-Package pdftex.def Info: Imagenes/Semieje.png  used on input line 328.
+Package pdftex.def Info: Imagenes/Semieje.png  used on input line 329.
 (pdftex.def)             Requested size: 172.10011pt x 98.0914pt.
 
 
@@ -1847,7 +1847,7 @@ fourier/fourier-mlit.pfb><C:/Users/Sergio Alejandro/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/Sergio Alejandro/AppData
 /Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/Sergio Ale
 jandro/AppData/Local/Programs/MiKTeX/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on main.pdf (33 pages, 831051 bytes).
+Output written on main.pdf (33 pages, 830971 bytes).
 PDF statistics:
  1315 PDF objects out of 1440 (max. 8388607)
  74 named destinations out of 1000 (max. 500000)
