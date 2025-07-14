@@ -132,16 +132,16 @@ Edgar Santiago Ochoa Quiroga}
 
 Los cocientes de $\Hs^2$ son lo que denominaremos como superficies hiperbólicas. Se tiene que $\Hs^2$ viene equipado con una métrica dada por
 $$ds^2=\dfrac{dx^2+dy^2}{y^2},$$
-ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo de isometrias que preservan la orientación de esta métrica.\\
+además el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente el grupo de isometrías que preservan la orientación de esta métrica.\\
 \vspace{0.3cm}
-\textbf{Observación:} Todos los cocientes de $\Hs^2$ que dan lugar a una superficie de Riemann heredan una métrica completa de curvatura constante $-1$, es decir una métrica hiperbólica. Mas aun toda métrica de la que se puede dotar una superficie da lugar a una superficie de Riemann.
+\textbf{Observación:} Todos los cocientes de $\Hs^2$ que dan lugar a una superficie de Riemann heredan una métrica completa de curvatura constante $-1$, es decir una métrica hiperbólica. Más aún, toda métrica de la que se puede dotar una superficie da lugar a una superficie de Riemann.
     
 \end{frame}
-\begin{frame}{Espacio de Teichmuller del Toro}
+\begin{frame}{Espacio de Teichmüller del Toro}
     En general un espacio de Teichmüller asociado a una superficie sera el espacio de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
     \vspace{0.5cm}
 
-    Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmuller ocurre lo mismo, por lo que nuestro interés inicial sera estudiar estos espacios para los toros $\C/L$
+    Por el Teorema de Uniformizacion solo podemos asignarle una estructura de superficie de Riemann a $\C_\infty$, por lo que segun nuestra idea general el espacio de Moduli es un único punto. Resulta que para el espacio de Teichmüller ocurre lo mismo, por lo que nuestro interés inicial será estudiar estos espacios para los toros $\C/L$
 \end{frame}
 \begin{frame}
     Recordemos que los retículos están determinados por una base de la forma $\{1,\tau\}$, donde $\tau\in \Hs^2$, por lo cual cualquier estructura compleja del toro viene determinada por un punto del plano hiperbólico. Sin embargo pueden existir $\tau, \tau' \in \Hs^2$ con $\tau \neq \tau'$ que resulten en dos estructuras biholomorfas.
@@ -159,7 +159,7 @@ ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo 
 \begin{frame}
     Sea $\mathcal{M}_1 = \Hs^2/\text{SL}(2,\Z) = \Hs^2/\text{PSL}(2,\Z)$ queremos ver como es la topología de este cociente. 
     \begin{block}{Definición}
-        Sea $G$ un grupo y $X$ espacio topologico. Si $G$ actua sobre $X$ definimos un dominio fundamental como un subespacio de $X$ cerrado tal que su interior contiene solo un elemento de cada orbita.
+        Sea $G$ un grupo que actúa sobre un espacio topológico $X$, definimos un dominio fundamental como un subespacio de $X$ cerrado tal que su interior contiene solo un elemento de cada órbita.
     \end{block}
     Con esta idea podemos estudiar la estructura del cociente presentado. Considere el conjunto 
     $$\mathcal{F}=\left\{z\in\Hs^2:|z|\geq 1\text{ y } |Re(z)|\leq \frac{1}{2}\right\}.$$
@@ -170,13 +170,13 @@ ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo 
     
 \end{frame}
 \begin{frame}
-    Note que dado $\tau\in\Hs^2$ existe $g\in PSL(2,\Z)$ tal que $g\tau\in\mathcal{F}.$ Esto se tiene ya que dado tal $g$ un calculo nos muestra que
-    $$Im(gz)=\frac{Im(z)}{|cz+d|^2},$$
-    Podemos tomar $g$ tal que $Im(g\tau)$ es maximal y de hecho es maximo. Luego podemos trasladar por medio de $z\to z+1$ hasta que $|Re(g\tau)|\leq \dfrac{1}{2}.$ Si $|g\tau|<1$ entonces $\left|\dfrac{1}{g\tau}\right|>1$ y eso contradice la maximalidad de la parte imaginaria.\\
+    Note que dado $\tau\in\Hs^2$ existe $g\in \text{PSL}(2,\Z)$ tal que $g\tau\in\mathcal{F}.$ Esto se tiene ya que dado tal $g$ un calculo nos muestra que
+    $$\text{Im}(gz)=\frac{\text{Im}(z)}{|cz+d|^2},$$
+    Podemos tomar $g$ tal que $\text{Im}(g\tau)$ es maximal y de hecho es maximo. Luego podemos trasladar por medio de $z\to z+1$ hasta que $|\text{Re}(g\tau)|\leq \dfrac{1}{2}.$ Si $|g\tau|<1$ entonces $\left|\dfrac{1}{g\tau}\right|>1$ y eso contradice la maximalidad de la parte imaginaria.\\
     Podemos ver que
     \begin{itemize}
-        \item Si $\tau\in Int(\mathcal{F})$ entonces $O(\tau)\cap\mathcal{F}=\{\tau\}.$ 
-        \item Si $Re(\tau)=\pm\dfrac{1}{2}$ entonces $O(\tau)\cap\mathcal{F}=\{\tau,\tau\mp1\}.$
+        \item Si $\tau\in \text{Int}(\mathcal{F})$ entonces $O(\tau)\cap\mathcal{F}=\{\tau\}.$ 
+        \item Si $\text{Re}(\tau)=\pm\dfrac{1}{2}$ entonces $O(\tau)\cap\mathcal{F}=\{\tau,\tau\mp1\}.$
         \item Si $|\tau|=1$ entonces $O(\tau)\cap \mathcal{F}=\left\{\tau,-\dfrac{1}{\tau}\right\}.$
     \end{itemize}
     
@@ -211,17 +211,17 @@ ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo 
         \item Un \textit{marking} en $X$ es un sistema canónico de generadores $\Sigma_p \subset \pi_1(X,p)$
         \item Dos markings $\Sigma_p$ y $\Sigma_{p'}^\prime$ se dicen  \textbf{equivalentes} si existe una curva contínua $\alpha$ entre $p$ y $p'$, tal que el isomorfismo inducido $T_\alpha: \pi_1(X,p) \rightarrow \pi_1(X,p')$ satisface
         \[
-        T_\alpha(\Sigma_p) = \Sigma_p'
+        T_\alpha(\Sigma_p) = \Sigma_{p^\prime}'
         \]
     \end{itemize}
-    Al par $(X,\Sigma_p)$ lo llamamos \textbf{superficie de Riemann marcada} 
+    Al par $(X,\Sigma_p)$ lo llamamos \textbf{superficie de Riemann marcada}. 
     \end{block}
     \end{frame}
 
     \begin{frame}
-        Entonces siguiendo la construcción hecha para el Toro el espacio de Teichmuller de una superficie $X$ cerrada, es el conjunto de las superficies marcadas que son difeomorfas a $X$ modulo equivalencia.\\
+        Entonces siguiendo la construcción hecha para el Toro el espacio de Teichmuller de una superficie $X$ cerrada, es el conjunto de las superficies marcadas que son difeomorfas a $X$ módulo equivalencia.\\
         \vspace{0.3cm}
-        Con esto tenemos una caracterización del espacio de Teichmuller, pero no nos da información sobre su topología, asi es como introducimos el \textit{Marking por difeomorfismos.} 
+        Con esto tenemos una caracterización del espacio de Teichmüller, pero no nos da información sobre su topología, por tanto introducimos el \textit{Marking por difeomorfismos.} 
     \end{frame}
     \begin{frame}
         \begin{block}{Definición}
@@ -235,34 +235,34 @@ ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo 
         \end{block}
         \textbf{Observación:} Si escogemos un conjunto de generadores $\Sigma$ para el grupo fundamental $\pi_1(X,p)$, entonces cada pareja $(R,f)$ define un punto
         $$(R,f_{*}(\Sigma))\in \mathcal{T}.$$
-        Donde $\mathcal{T}$ es el espacio de Teichmuller de $X.$
+        Donde $\mathcal{T}$ es el espacio de Teichmüller de $X.$
         
     \end{frame}
     \begin{frame}
-        La definición anterior nos brinda una nueva descripción del espacio de Teichmuller de una superficie $X.$
+        La definición anterior nos brinda una nueva descripción del espacio de Teichmüller de una superficie $X.$
         $$\mathcal{T}(X)=\left\{(R, f): \begin{array}{c}R \text{ es una superficie de Riemann }, f: X \rightarrow R \\ \text{ un difeomorfismo que preserva la orientación }\end{array}\right\} / \sim.$$
-        Con esta nueva descripción sera mucho mas sencillo describir el espacio de Moduli, con lo que llamaremos \textit{Mapping class group.}
+        Con esta nueva descripción será mucho mas sencillo describir el espacio de Moduli, con lo que llamaremos \textit{Mapping class group.}
     \end{frame}
 
     \begin{frame}{Mapping class group}
         Sea $X$ una superficie de Riemann cerrada. Definimos
         $$Diff^+(X)=\left\{f:X\to X| f \text{ es un difeomorfismo que preserva la orientación }\right\},$$
         y
-        $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotopico a la identidad}\right\}.$$
+        $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotópico a la identidad}\right\}.$$
         Podemos notar que $Diff^+(X)$ es un grupo y que $Diff^+_0(X)$ es un subgrupo normal de $Diff^+(X).$ Con lo cual 
         \begin{block}{Definición}
             El \textbf{Mapping class group} de una superficie de riemann cerrada $X$ es
-            $$MCG(X):=Diff^+(X)/Diff^+_0(X).$$
+            $$\text{MCG}(X):=Diff^+(X)/Diff^+_0(X).$$
         \end{block}
         
     \end{frame}
     \begin{frame}{Espacio de Moduli}
-        El \textit{Mappin class group} actua sobre el espacio de Teichmuller de la siguiente manera:
+        El \textit{Mapping class group} actúa sobre el espacio de Teichmüller de la siguiente manera:
         $$[g]\cdot[(R,f)]=[(R,f\circ g^{-1})].$$
-        El cociente de el espacio de Teicchmuller por esta acción es lo que llamaremos espacio de Moduli, es decir
+        El cociente de el espacio de Teichmüller por esta acción es lo que llamaremos espacio de Moduli, es decir
         \begin{block}{Definición}
             El \textbf{espacio de Moduli} de una superficie de Riemann cerrada $X$ es
-            $$\mathcal{M}(X)=\mathcal{T}(X)/MCG(X).$$
+            $$\mathcal{M}(X)=\mathcal{T}(X)/\text{MCG}(X).$$
         \end{block}
         Si $X$ es una superficie cerrada de genero $g$, se suele denotar $\mathcal{T}(X)=\mathcal{T}_g$ y $\mathcal{M}(X)=\mathcal{M}_g$
     \end{frame}
@@ -273,7 +273,7 @@ ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo 
     
 
 \begin{frame}{Aplicaciones conformes y cuasiconformes}
-Sea $w=f(z)$ un homeomorfismo $C^1$ de una región a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que
+Sea $w=f(z)$ un homeomorfismo $C^1$ de una región del plano complejo a otra. En un punto $z_0$ se inducen aplicaciones lineales de diferenciales tal que
 \begin{align*}
     du&=u_xdx+u_ydy,\\
     dv&=v_xdx+v_ydy.\\
@@ -344,7 +344,7 @@ Resulta mas conveniente considerar
         $$\mu_g\circ f=\frac{f_z}{\overline{f_z}}\frac{\mu_{g\circ f}-\mu_f}{1-\overline{\mu_f}\cdot\mu_{g\circ f}}.$$ 
         Es particular si tenemos difeomorfismos que preservan la orientación $f_1:R\to S_1$ y $f_2:R\to S_2$, la aplicacion $f_2\circ f_1^{-1}$ es biholomorfa si y solo si $\mu_{f_1}=\mu_{f_2}.$
     \end{block}
-    Ahora construiremos el espacio de Teichmuller en terminos de los coeficientes de Beltrami de $X.$ Sea $B(X)_1$ el conjunto de los coeficientes de Beltrami de $X$, si equipamos a este conjunto con la norma $L^\infty$, hemos una definido una topología. 
+    Ahora construiremos el espacio de Teichmüller en términos de los coeficientes de Beltrami de $X.$ Sea $B(X)_1$ el conjunto de los coeficientes de Beltrami de $X$, si equipamos a este conjunto con la norma $L^\infty$, hemos definido una topología. 
 \end{frame}
 \begin{frame}
     Consideramos la acción de $Diff^+(X)$ sobre $B(X)_1$, dada por
@@ -354,15 +354,15 @@ Resulta mas conveniente considerar
     \end{block}
     Esta relación nos dice como son las orbitas del cociente.
     \begin{block}{Corolario}
-        La aplicación que envia $(R,f)$ a $\mu_f\in B(X)_1$ induce las siguientes identificaciones
+        La aplicación que envia $(R,f)$ a $\mu_f\in B(X)_1$ induce las siguientes correspondencias
         \begin{align*}
            \mathcal{T}(X)&\cong B(X)_1/Diff_0^+(X),\\
            \mathcal{M}(X)&\cong B(X)_1/Diff^+(X). 
         \end{align*}
     \end{block}
-    Con esto hemos inducido una topología, que resulta independiente de la estructura compleja inicial de $X.$
+    Con esto hemos inducido una topología en $\mathcal{T}(X)$ y $\mathcal{M}(X)$, que resulta independiente de la estructura compleja inicial de $X.$
 \end{frame}
-\begin{frame}{La métrica de Teichmuller}
+\begin{frame}{La métrica de Teichmüller}
 \begin{block}{Definición}
     Sea $X$ una superficie de Riemann, entonces podemos definir una metrica sobre $\mathcal{T}(X)$ de la siguiente manera
     $$d_T((R_1,f_1),(R_2,f_2))=\frac{1}{2}\log\left(\inf\left\{D_g:\begin{array}{c} g:R_1\to R_2 \text{ es un difeomorfismo que}\\\text{ preserva la orientación homotopico a}\\f_2\circ f_1^{-1}\end{array}\right\}\right).$$
@@ -373,14 +373,14 @@ Esta metrica resulta ser una generalizacion de lo que se conoce como \textit{el 
     
 \end{frame}
 
-\begin{frame}{Problema de Grotschz}
+\begin{frame}{Problema de Grötschz}
     Sean $R,R^\prime$ dos rectángulos de lados $a,b$ y $a^\prime,b^\prime$ respectivamente. Queremos ver cual es la aplicación $f$ que enviá $R\to R^\prime$, que sea lo mas conforme posible, con conforme nos referimos a que la norma de la dilatación $D_f$ sea mínima.
     \begin{block}{Teorema}
         Sea 
         $$f(z)=\frac{1}{2}\left(\frac{a^\prime}{a}+\frac{b^\prime}{b}\right)z+\frac{1}{2}\left(\frac{a^\prime}{a}-\frac{b^\prime}{b}\right)\overline{z},$$
-        entonces $f(z)$ es solución para el problema de Grotschz.
+        entonces $f(z)$ es solución para el problema de Grötschz.
     \end{block}
-    Note que esta funcion representa una transformacion afin que es 
+    Note que esta función representa una transformación afín dada por 
     $$f(x,y)=\left(\frac{a^\prime}{a}x,\frac{b^\prime}{b}y\right).$$
 \end{frame}
 

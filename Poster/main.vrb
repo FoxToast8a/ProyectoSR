@@ -2,17 +2,95 @@
 \separatorcolumn
 \begin{column}{\colwidth}
 
-\begin{block}{La familia pepa}
-\lipsum[1]
+\begin{block}{Marking por difeomorfismos}
+\defi{Definición: }Sean $R$ y $R^\prime$ superficies de Riemann, definamos
+            \begin{align*}
+                 f:X\to R\,\text{  y  }\,f^\prime:X\to R^\prime,
+             \end{align*}
+             como difeomorfismos que preservan la orientación. Decimos que las parejas $(R,f)$ y $(R^\prime,f^\prime)$ son equivalentes si existe un biholomorfismo $h:R\to R^\prime$ tal que
+             $$(f^\prime)^{-1}\circ h\circ f:X\to X,$$
+             es homotopico a la identidad.\\
+        \defi{Observación: } Si escogemos un conjunto de generadores $\Sigma$ para el grupo fundamental $\pi_1(X,p)$, entonces cada pareja $(R,f)$ define un punto
+        $$(R,f_{*}(\Sigma))\in \mathcal{T}.$$
+        Donde $\mathcal{T}$ es el espacio de Teichmüller de $X.$
+        Ésta nos brinda una nueva descripción del espacio de Teichmïller de una superficie $X.$
+        $$\mathcal{T}(X)=\left\{(R, f): \begin{array}{c}R \text{ es una superficie de Riemann }, f: X \rightarrow R \\ \text{ un difeomorfismo que preserva la orientación }\end{array}\right\} / \sim.$$
+        Con esta nueva descripción será mucho mas sencillo describir el espacio de Moduli, con lo que llamaremos \textit{Mapping class group.}
 \end{block}
-\lipsum[2-6]
+
+\begin{alertblock}{Mapping class group}
+Sea $X$ una superficie de Riemann cerrada. Definimos\\
+       $$Diff^+(X)=\left\{f:X\to X| \begin{array}{c}f \text{ es un difeomorfismo que}\\ \text{preserva la orientación }\end{array}\right\},$$\\
+        y
+        $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotópico a la identidad}\right\}.$$\\
+        Podemos notar que $Diff^+(X)$ es un grupo y que $Diff^+_0(X)$ es un subgrupo normal de $Diff^+(X).$ Con lo cual\\
+        \vspace{0.2cm}
+        \defi{Definición: }El \textbf{Mapping class group} de una superficie de riemann cerrada $X$ es
+            $$\text{MCG}(X):=Diff^+(X)/Diff^+_0(X).$$\\
+        \vspace{0.2cm}
+        El \textit{Mapping class group} actua sobre el espacio de Teichmüller de la siguiente manera:
+        $$[g]\cdot[(R,f)]=[(R,f\circ g^{-1})].$$
+        El cociente de el espacio de Teichmüller por esta acción es lo que llamaremos espacio de Moduli, es decir
+            El \textbf{espacio de Moduli} de una superficie de Riemann cerrada $X$ es
+            $$\mathcal{M}(X)=\mathcal{T}(X)/\text{MCG}(X).$$
+
+\end{alertblock}
+
+\begin{block}{Aplicaciones conformes y cuasiconformes}
+    \defi{Definición: } Sea $f: D \rightarrow D^{\prime}$ un difeomorfismo que preserva la orientación de un dominio $D$ del plano complejo a otro $D'$. Definimos la $\textbf{dilatación}$ de $f$ en el punto $z$ como
+    $$D_f=\frac{|f_z|+|f_{\overline{z}}|}{|f_z|-|f_{\overline{z}}|}\geq 1.$$\\
+
+    $f$ se dice cuasiconforme si $D_f$ es acotada, particularmente tenemos que $f$ es conforme si $D_f=1$.
+\end{block}
+
 
 \end{column}
 
 \separatorcolumn
 
 \begin{column}{\colwidth}
-\lipsum[1-7]
+\phantom{xd}\\ \vspace{0.85cm}
+Nos resulta más conveniente considerar
+     $$d_f=\frac{|f_{\overline{z}}|}{|f_z|}<1,$$
+    que se relaciona con $D_f$ tal que
+    $$D_f=\frac{1+d_f}{1-d_f}.$$
+\defi{Definición: } La \text{dilatación compleja} esta dada por
+        $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
+        LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
+\begin{exampleblock}{Espacios de coeficientes de Beltrami}
+\defi{Proposición: }Dadas superficies de Riemann $R,S,T,$ y difeomorfismos que preservan la orientación $f:R\to S$ y $g:S\to T$, se tiene la siguiente relación
+        $$\mu_g\circ f=\frac{f_z}{\overline{f_z}}\frac{\mu_{g\circ f}-\mu_f}{1-\overline{\mu_f}\cdot\mu_{g\circ f}}.$$
+        Es particular si tenemos difeomorfismos que preservan la orientación $f_1:R\to S_1$ y $f_2:R\to S_2$, la aplicacion $f_2\circ f_1^{-1}$ es biholomorfa si y solo si $\mu_{f_1}=\mu_{f_2}.$\\
+    Sea $B(X)_1$ el conjunto de los coeficientes de Beltrami de $X$, si equipamos a este conjunto con la norma $L^\infty$, hemos definido una topología. Consideramos la acción de $Diff^+(X)$ sobre $B(X)_1$, dada por
+    $$w^*(\mu_f)=\mu_{f\circ w^{-1}}=\left(\frac{w_z}{\overline{w_z}}\frac{\mu_f-\mu_w}{1-\overline{\mu_w}\mu_f}\right)\circ w^{-1},$$
+    \defi{Teorema: }Dados difeomorfismos que preservan la orientación $f:X\to R$ y $g:X\to R^\prime$, existe una aplicacion biholomorfa $h:R\to R^\prime$ si y solo si existe $w\in Diff^+(X)$ tal que $\mu_g=w^*(\mu_f).$ Ademas $g^{-1}\circ h\circ f$ es homotopico a la identidad en $X$ si y solo si $w\in Diff_0^+(X).$\\
+    \defi{Corolario: }La aplicación que envia $(R,f)$ a $\mu_f\in B(X)_1$ induce las siguientes correspondencias
+        \begin{align*}
+           \mathcal{T}(X)&\cong B(X)_1/Diff_0^+(X),\\
+           \mathcal{M}(X)&\cong B(X)_1/Diff^+(X).
+        \end{align*}
+\end{exampleblock}
+\begin{alertblock}{Problema de Grötschz}
+    Sean $R,R^\prime$ dos rectángulos de lados $a,b$ y $a^\prime,b^\prime$ respectivamente. Queremos ver cual es la aplicación $f$ que enviá $R\to R^\prime$, que sea lo mas conforme posible, con conforme nos referimos a que la norma de la dilatación $D_f$ sea mínima.\\
+    \defi{Teorema: }        Sea
+        $$f(z)=\frac{1}{2}\left(\frac{a^\prime}{a}+\frac{b^\prime}{b}\right)z+\frac{1}{2}\left(\frac{a^\prime}{a}-\frac{b^\prime}{b}\right)\overline{z},$$
+        entonces $f(z)$ es solución para el problema de Grötschz.\\
+\end{alertblock}
+\begin{block}{Referencias}
+        \begin{thebibliography}{9}
+
+\bibitem{ahlfors}
+L. V. Ahlfors, \textit{Lectures on Quasiconformal Mappings}, D. Van Nostrand Company, 1966.
+
+\bibitem{petri}
+B. Petri, \textit{Introduction to Teichmüller Theory. Lecture Notes}, 2024.
+
+\bibitem{Imayoshi}
+Y. Imayoshi, M. Taniguchi, \textit{An Introduction to Teichmüller Spaces}, Springer, 1992.
+
+
+\end{thebibliography}
+\end{block}
 \end{column}
 
 \separatorcolumn

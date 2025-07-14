@@ -16,6 +16,7 @@
 \newcommand\Z{\ensuremath{\mathbb{Z}}}
 \newcommand\Q{\ensuremath{\mathbb{Q}}}
 \newcommand\C{\ensuremath{\mathbb{C}}}
+\newcommand\Hs{\ensuremath{\mathbb{H}}}
 \newlength{\sepwidth}
 \newlength{\colwidth}
 \setlength{\sepwidth}{0.025\paperwidth}
@@ -39,95 +40,84 @@
 
 \begin{column}{\colwidth}
 
-\begin{block}{Resumen}
-El teorema de los números primos nos dice que en el límite, el cociente $\dfrac{\pi(x)\log x}{x}$ tiende a 1, es decir, que $\pi(x)\thicksim \dfrac{x}{\log x}$ donde $\pi(x)$ es la función contadora de primos. En progresiones aritméticas $a+kq$ con $(a,q)=1$, tenemos que $\pi(a,q,x)$; la función contadora restringida a la progresión, tiene el comportamiento asintótico $\pi(a,q,x)\thicksim \dfrac{x}{\phi(q)\log x}$, es decir, los primos se distribuyen uniformemente en las clases de residuos módulo $q$. En este trabajo se presentará la prueba de este resultado y las ideas subyacentes. Para esto, haremos uso de la teoría Tauberiana, lo que nos permitirá presentar una prueba detallada y corta, que se seguirá estudiando la no nulidad de $L(\chi,s)$ y algunas propiedades de los caracteres y series de Dirichlet.
+\begin{block}{Introducción}
+Uno de los problemas principales en el estudio de las superficies de Riemann es su clasificación, en particular hemos visto que una misma superficie puede tener dos estructuras complejas completamente diferentes, por lo que nos interesamos en caracterizar todas estas estructuras. A partir de este problema surgen los espacios de Moduli y Teichmüller, que por su estructura ayudan a clasificar todas las posibles estructuras complejas de una superficie dada. Nuestro propósito es hacer una breve introducción a éstos espacios, incluyendo algunas construcciones elementales.
 \end{block}
 
-\begin{block}{El Teorema de Dirichlet}
-
-Desde los tiempos de Euclides se sabe que existen infinitos números primos, sin embargo no se conocía mucho mucho sobre su distribución,
-\begin{itemize}
-    \item  ¿Existen infinitos números primos de la forma $a+kn$?
-    \item ¿Cómo se distribuyen los números primos en cada  una de las clases de equivalencia módulo $n$?.
-\end{itemize}
-El argumento de Euclides provenía de ver que si existen finitos números primos, digamos $p_1,\ldots,p_n$, entonces $p_1p_2\cdots p_n+1$ no es divisible por ningún primo $p_i$.\\
-\vspace*{0.3cm}
-\defi{Teorema (Dirichlet)}
-Dados $a$ y $d$ primos relativos, existen infinitos primos de la forma
-    $$a, a+d,a+2d,a+3d,...$$
-\defi{Teorema (Euler)} La suma $\displaystyle  \sum_{p}\dfrac{1}{p}$ es divergente.\\
-
-La idea de Euler consiste en explotar la identidad 
-$$\prod_p \left(1-\dfrac{1}{p^s}\right)^{-1}=\sum_{n=1}^{\infty}\dfrac{1}{n^s},\quad  \Re(s)>1$$
-de donde obtiene que 
-    $$
-\log (\zeta(s))=\sum_p^{\infty}\left(\displaystyle\sum_{k=1}^{\infty} \dfrac{1}{k(p)^{k s}}\right)=\sum_p
-\dfrac{1}{p^s}+\sum_{p}\left(\sum_{k=2}^{\infty}\dfrac{1}{kp^{ks}}\right), \quad \Re(s)>1$$
-\end{block}
+\begin{exampleblock}{Teorema de Uniformizacion}
+Sea $X$ una superficie de Riemann simplemente conexa, entonces $X$ es biholomorfa a exactamente una de las siguientes superficies
+        \begin{itemize}
+            \item La esfera de Riemann $\C_{\infty}.$
+            \item El plano Complejo $\C.$
+            \item El semiplano superior $\Hs^2.$
+        \end{itemize}
+\end{exampleblock}
     
-\begin{alertblock}{La idea de Dirichlet}
-
-Sea $f(n)$ la función característica de la progresión aritmética, es decir
-$$
-f(n)=\left\{\begin{array}{lll}
-1, & n \equiv a & \pmod{m} \\
-0, & n \not \equiv a & \pmod{m}
-\end{array}\right.
-$$
-en el caso de que $f(n)$ sea completamente multiplicativa tendríamos un producto de Euler
-$$
-\sum_{n=1}^{\infty} \frac{f(n)}{n^s}=\prod_p\left(1-\frac{f(p)}{p^s}\right)^{-1}, \quad \Re(s)>1
-$$
-y así por argumentos análogos a los de Euler se tendría que
-$$\log \left(\sum_{n=1}^{\infty} \frac{f(n)}{n^s}\right)=\sum_{p \equiv a\bmod{m}} \frac{1}{p^s}+O(1)$$
-Lamentablemente, $f(n)$ generalmente no es multiplicativa.\\
+\begin{block}{Cocientes de superficies}
+    Como consecuencia del teorema de uniformización, podemos realizar cada superficie de Riemann como un cociente de $\C,\C_\infty$ o $\Hs^2$, más específicamente, tenemos los siguientes resultados:\\
+    \vspace{0.2cm}
+    \defi{Proposición: }Sea $X$ una superficie de Riemann. El cubrimiento universal de $X$ es biholomorfo a $\C_\infty$ si y solo si $X$ es biholomorfo a $\C_\infty$.\\
+    \vspace{0.2cm}
+    \defi{Proposición: }Sea $X$ una superficie de Riemann. El cubrimiento universal de $X$ es biholomorfo a $\C$ si y solo si $X$ es biholomorfo a $\C,\C-\{0\}$ o $\C/L$.\\ 
+    \vspace{0.2cm}
+    De ésto podemos observar que la mayor variedad se encuentra en los cocientes de $\Hs^2$. 
+\end{block}    
+\begin{alertblock}{Superficies hiperbólicas}
+Los cocientes de $\Hs^2$ son lo que denominaremos como superficies hiperbólicas. Se tiene que $\Hs^2$ viene equipado con una métrica dada por
+$$ds^2=\dfrac{dx^2+dy^2}{y^2},$$
+además, el grupo de automorfismos $\text{PSL}(2,\R)$ de $\Hs^2$, es justamente el grupo de isometrías que preservan la orientación de esta métrica.\\
+\vspace{0.3cm}
+\defi{Observación:} Todos los cocientes de $\Hs^2$ que dan lugar a una superficie de Riemann heredan una métrica completa de curvatura constante $-1$, es decir una métrica hiperbólica. Más aún, toda métrica de la que se puede dotar una superficie da lugar a una superficie de Riemann.
   \end{alertblock}
+\begin{block}{Espacio de Teichmüller del Toro}
+    Sabemos que todo toro complejo es isomorfo a un toro determinado por $\{1,\tau\}$ con $\tau \in \Hs^2$, lo cual nos indica que cualquier estructura compleja del toro viene determinada por un punto del plano hiperbólico. Sin embargo, pueden existir $\tau,\tau^{\prime} \in \Hs^2$ con $\tau = \tau^{\prime}$ que resulten en dos estructuras biholomorfas.\\ 
+    \vspace{0.2cm}
+    \defi{Proposición: } Sean $\C/L$ y $\C/L'$ dos toros determinados por $\tau$ y $\tau'$ respectivamente, entonces son biholomorfos si y solo si
+        \[
+            \tau' = \frac{a\tau + b}{c\tau + d}
+        \]
+        Con $a,b,c,d \in \Z$ y $ad-bc=1$.\\ 
+    Ésto quiere decir que las estructuras de superficie de Riemann del toro están determinadas por la acción de $\text{SL}(2,\Z)$ sobre $\Hs^2$
+\end{block}
 
 \end{column}
 
 \separatorcolumn
 
 \begin{column}{\colwidth}
-\phantom{xd}\\\vspace*{0.6cm}
-El camino para probar este teorema es ver que $\displaystyle\psi(x)=\sum_{n\leq x} \Lambda(n)\thicksim x,$ donde $\Lambda(n)$ es la función de Von Mangolth, $\displaystyle\Lambda(n)=\begin{cases}
-    \log(p) &\text{si } n=p^k, k\geq 1\\
-    0 &\text{e.o.c}
-\end{cases}$
-\begin{block}{Teoremas tauberianos}
-\defi{Proposición: }Sea $\displaystyle \sum_{n=0}^{\infty} a_n x^n$, $x\in \R$ una serie de potencias centrada en $0$ y con radio  de convergencia $1$, si
-$$\sum_{n=0}^{\infty} a_n=A,\text{ entonces } \lim_{x \to 1^-}\sum_{n=0}^{\infty} a_n x^n=A.$$
-Los teoremas tauberianos son recíprocos condicionales del teorema de Abel.\\
-\defi{Proposición (Tauber, 1897)} Sea $f(x)=\displaystyle\sum_{n=0}^{\infty} a_n x^n$ una serie de potencias que converge absolutamente para $|x|<1$.
-Si $\lim_{x \rightarrow 1^{-}} f(x)=A$ y se cumple la condición $a_n=o\left(\dfrac{1}{n}\right)$, entonces $\displaystyle\sum_{n=0}^{\infty}a_n=A$.
-\end{block}
-\begin{exampleblock}{Teorema de Wiener-Ikehara}
-Sean $a_n \geq 0$ y $F(s)=\displaystyle\sum_{n=1}^{\infty} \frac{a_n}{n^s}$ una serie absolutamente convergente. Supongamos que se cumplen las siguientes condiciones:
+\begin{block}{Espacio de Moduli del toro}
+Sea $\mathcal{M}_1 = \Hs^2/\text{SL}(2,\Z) = \Hs^2/\text{PSL}(2,\Z)$, podemos comprender la topología de este cociente a partir de su dominio fundamental, consideremos el conjunto:
+    $$\mathcal{F}=\left\{z\in\Hs^2:|z|\geq 1\text{ y } |Re(z)|\leq \frac{1}{2}\right\}.$$
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.7\linewidth]{Imagenes/FunDom.png}
+        \end{figure} 
+Sea $\tau \in \mathcal{F}$, tenemos lo siguiente:
 \begin{itemize}
-\item La función $F(s)$ se extiende a una función analítica en la región $\Re(s) \geq 1$ con un único polo simple en $s=1$, cuyo residuo es $1$.\\
-\item $A(x)=\displaystyle \sum_{n \leq x} a_n=O(x)$.
-\end{itemize}
-Entonces, se tiene que $A(x)=x+o(x) \text { cuando } x \rightarrow \infty \text {. }
-$
-\end{exampleblock}
-Aplicando el teorema anterior a la serie de Dirichlet $\displaystyle-\dfrac{\zeta^{\prime}(s)}{\zeta(s)}=\sum_{n=1}^{\infty}\dfrac{\Lambda(n)}{n^s}$, se obtiene el TNP, como corolario de
-$$\zeta(1+it)\neq 0, \text{ para todo } t\neq 0.$$
-\defi{Teorema (Korevaar y Zagier)} Para $t \geq 0$, sea $f(t)$ una función acotada y localmente integrable y sea $$g(s):=\displaystyle\int_0^{\infty} f(t) e^{-s t} d t,$$
-para $\Re(s)>0$. Si $g(s)$ tiene continuación analítica a $\Re(s) \geq 0$, entonces $\displaystyle\int_0^{\infty} f(t) d t$ existe y es igual a $g(0)$.
-La prueba consiste en estimar la integral
-$$I_{C}=\frac{1}{2\pi i}\int_{C}\left(g(s)-g_T(s)\right)e^{sT}\left(1+\frac{s^2}{R^2}\right)\frac{1}{s}ds=g(0)-g_T(0),$$
-donde $C$ es el siguiente contorno
+        \item Si $\tau\in \text{Int}(\mathcal{F})$ entonces $O(\tau)\cap\mathcal{F}=\{\tau\}.$ 
+        \item Si $\text{Re}(\tau)=\pm\dfrac{1}{2}$ entonces $O(\tau)\cap\mathcal{F}=\{\tau,\tau\mp1\}.$
+        \item Si $|\tau|=1$ entonces $O(\tau)\cap \mathcal{F}=\left\{\tau,-\dfrac{1}{\tau}\right\}.$
+    \end{itemize}
+Entonces $\mathcal{M}_1$ es el espacio que resulta de identificar los bordes de $\mathcal{F}$, así:
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.7\linewidth]{Imagenes/Empanada.png}
+        \end{figure} 
 
-Obtenemos \[
-g(0) = \lim _{T \rightarrow \infty} g_T(0).
-\]
-\defi{Teorema (Korevaar y Zagier) }Sean $a_n\geq 0$ y $A(x)=\displaystyle\sum_{n\leq x} a_n$, si  la integral $\displaystyle\int_1^{\infty}\frac{A(x)-x}{x^2}dx$
-converge, entonces $A(x)\thicksim x$\\
-\vspace*{0.2cm}
-Aplicando lo anterior y sabiendo que 
-\[
-\sum_{n=1}^{\infty}a_nn^{-s} - \frac{s}{s-1} = s \int_1^{\infty} \frac{A(t)-t}{t^{s+1}} d t,
-\]
-se obtiene una prueba del teorema tauberiano.
+    $\mathcal{M}_1$ se denomina el espacio de móduli del toro y $\mathcal{T}_1 = \Hs^2 $ es el espacio de Teichmüller
+\end{block}
+\begin{alertblock}{Marking}
+    \defi{Definición: }Sea $X$ una superficie de Riemann cerrada género g,  decimos que $\Sigma_g = \{[A_1],[A_2],\ldots,[A_g],[B_1],[B_2],\ldots, [B_g]\}$ es un \textbf{sistema canónico de generadores} para $\pi_1(X,p_0)$ si\\
+    $$\prod_{i=1}^g [A_i,B_i] = e$$\\
+    \begin{itemize}
+        \item Un \textit{marking} en $X$ es un sistema canónico de generadores $\Sigma_p \subset \pi_1(X,p)$
+        \item Dos markings $\Sigma_p$ y $\Sigma_{p'}^\prime$ se dicen  \textbf{equivalentes} si existe una curva contínua $\alpha$ entre $p$ y $p'$, tal que el isomorfismo inducido $T_\alpha: \pi_1(X,p) \rightarrow \pi_1(X,p')$ satisface\\
+        $$
+        T_\alpha(\Sigma_p) = \Sigma_{p^\prime}'.
+        $$\\
+    \end{itemize}
+    Al par $(X,\Sigma_p)$ lo llamamos \textbf{superficie de Riemann marcada}. 
+\end{alertblock}
 \end{column}
 
 \separatorcolumn
@@ -144,17 +134,95 @@ se obtiene una prueba del teorema tauberiano.
 \separatorcolumn
 \begin{column}{\colwidth}
 
-\begin{block}{La familia pepa}
-\lipsum[1]
+\begin{block}{Marking por difeomorfismos}
+\defi{Definición: }Sean $R$ y $R^\prime$ superficies de Riemann, definamos
+            \begin{align*}
+                 f:X\to R\,\text{  y  }\,f^\prime:X\to R^\prime,
+             \end{align*} 
+             como difeomorfismos que preservan la orientación. Decimos que las parejas $(R,f)$ y $(R^\prime,f^\prime)$ son equivalentes si existe un biholomorfismo $h:R\to R^\prime$ tal que
+             $$(f^\prime)^{-1}\circ h\circ f:X\to X,$$
+             es homotopico a la identidad.\\ 
+        \defi{Observación: } Si escogemos un conjunto de generadores $\Sigma$ para el grupo fundamental $\pi_1(X,p)$, entonces cada pareja $(R,f)$ define un punto
+        $$(R,f_{*}(\Sigma))\in \mathcal{T}.$$
+        Donde $\mathcal{T}$ es el espacio de Teichmüller de $X.$
+        Ésta nos brinda una nueva descripción del espacio de Teichmïller de una superficie $X.$
+        $$\mathcal{T}(X)=\left\{(R, f): \begin{array}{c}R \text{ es una superficie de Riemann }, f: X \rightarrow R \\ \text{ un difeomorfismo que preserva la orientación }\end{array}\right\} / \sim.$$
+        Con esta nueva descripción será mucho mas sencillo describir el espacio de Moduli, con lo que llamaremos \textit{Mapping class group.}
 \end{block}
-\lipsum[2-6]
+
+\begin{alertblock}{Mapping class group} 
+Sea $X$ una superficie de Riemann cerrada. Definimos\\
+       $$Diff^+(X)=\left\{f:X\to X| \begin{array}{c}f \text{ es un difeomorfismo que}\\ \text{preserva la orientación }\end{array}\right\},$$\\
+        y
+        $$Diff^+_0(X)=\left\{f\in Diff^+(X):f\text{ es homotópico a la identidad}\right\}.$$\\
+        Podemos notar que $Diff^+(X)$ es un grupo y que $Diff^+_0(X)$ es un subgrupo normal de $Diff^+(X).$ Con lo cual\\
+        \vspace{0.2cm} 
+        \defi{Definición: }El \textbf{Mapping class group} de una superficie de riemann cerrada $X$ es
+            $$\text{MCG}(X):=Diff^+(X)/Diff^+_0(X).$$\\ 
+        \vspace{0.2cm}
+        El \textit{Mapping class group} actua sobre el espacio de Teichmüller de la siguiente manera:
+        $$[g]\cdot[(R,f)]=[(R,f\circ g^{-1})].$$
+        El cociente de el espacio de Teichmüller por esta acción es lo que llamaremos espacio de Moduli, es decir
+            El \textbf{espacio de Moduli} de una superficie de Riemann cerrada $X$ es
+            $$\mathcal{M}(X)=\mathcal{T}(X)/\text{MCG}(X).$$
+    
+\end{alertblock}
+
+\begin{block}{Aplicaciones conformes y cuasiconformes}
+    \defi{Definición: } Sea $f: D \rightarrow D^{\prime}$ un difeomorfismo que preserva la orientación de un dominio $D$ del plano complejo a otro $D'$. Definimos la $\textbf{dilatación}$ de $f$ en el punto $z$ como 
+    $$D_f=\frac{|f_z|+|f_{\overline{z}}|}{|f_z|-|f_{\overline{z}}|}\geq 1.$$\\ 
+
+    $f$ se dice cuasiconforme si $D_f$ es acotada, particularmente tenemos que $f$ es conforme si $D_f=1$. 
+\end{block}
+
 
 \end{column}
 
 \separatorcolumn
 
 \begin{column}{\colwidth}
-\lipsum[1-7]
+\phantom{xd}\\ \vspace{0.85cm}
+Nos resulta más conveniente considerar 
+     $$d_f=\frac{|f_{\overline{z}}|}{|f_z|}<1,$$
+    que se relaciona con $D_f$ tal que
+    $$D_f=\frac{1+d_f}{1-d_f}.$$
+\defi{Definición: } La \text{dilatación compleja} esta dada por
+        $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
+        LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
+\begin{exampleblock}{Espacios de coeficientes de Beltrami}
+\defi{Proposición: }Dadas superficies de Riemann $R,S,T,$ y difeomorfismos que preservan la orientación $f:R\to S$ y $g:S\to T$, se tiene la siguiente relación
+        $$\mu_g\circ f=\frac{f_z}{\overline{f_z}}\frac{\mu_{g\circ f}-\mu_f}{1-\overline{\mu_f}\cdot\mu_{g\circ f}}.$$ 
+        Es particular si tenemos difeomorfismos que preservan la orientación $f_1:R\to S_1$ y $f_2:R\to S_2$, la aplicacion $f_2\circ f_1^{-1}$ es biholomorfa si y solo si $\mu_{f_1}=\mu_{f_2}.$\\
+    Sea $B(X)_1$ el conjunto de los coeficientes de Beltrami de $X$, si equipamos a este conjunto con la norma $L^\infty$, hemos definido una topología. Consideramos la acción de $Diff^+(X)$ sobre $B(X)_1$, dada por
+    $$w^*(\mu_f)=\mu_{f\circ w^{-1}}=\left(\frac{w_z}{\overline{w_z}}\frac{\mu_f-\mu_w}{1-\overline{\mu_w}\mu_f}\right)\circ w^{-1},$$
+    \defi{Teorema: }Dados difeomorfismos que preservan la orientación $f:X\to R$ y $g:X\to R^\prime$, existe una aplicacion biholomorfa $h:R\to R^\prime$ si y solo si existe $w\in Diff^+(X)$ tal que $\mu_g=w^*(\mu_f).$ Ademas $g^{-1}\circ h\circ f$ es homotopico a la identidad en $X$ si y solo si $w\in Diff_0^+(X).$\\ 
+    \defi{Corolario: }La aplicación que envia $(R,f)$ a $\mu_f\in B(X)_1$ induce las siguientes correspondencias
+        \begin{align*}
+           \mathcal{T}(X)&\cong B(X)_1/Diff_0^+(X),\\
+           \mathcal{M}(X)&\cong B(X)_1/Diff^+(X). 
+        \end{align*}
+\end{exampleblock}
+\begin{alertblock}{Problema de Grötschz}
+    Sean $R,R^\prime$ dos rectángulos de lados $a,b$ y $a^\prime,b^\prime$ respectivamente. Queremos ver cual es la aplicación $f$ que enviá $R\to R^\prime$, que sea lo mas conforme posible, con conforme nos referimos a que la norma de la dilatación $D_f$ sea mínima.\\
+    \defi{Teorema: }        Sea 
+        $$f(z)=\frac{1}{2}\left(\frac{a^\prime}{a}+\frac{b^\prime}{b}\right)z+\frac{1}{2}\left(\frac{a^\prime}{a}-\frac{b^\prime}{b}\right)\overline{z},$$
+        entonces $f(z)$ es solución para el problema de Grötschz.\\ 
+\end{alertblock}
+\begin{block}{Referencias}
+        \begin{thebibliography}{9}
+
+\bibitem{ahlfors}
+L. V. Ahlfors, \textit{Lectures on Quasiconformal Mappings}, D. Van Nostrand Company, 1966.
+
+\bibitem{petri}
+B. Petri, \textit{Introduction to Teichmüller Theory. Lecture Notes}, 2024.
+
+\bibitem{Imayoshi}
+Y. Imayoshi, M. Taniguchi, \textit{An Introduction to Teichmüller Spaces}, Springer, 1992.
+
+
+\end{thebibliography}
+\end{block}
 \end{column}
 
 \separatorcolumn
