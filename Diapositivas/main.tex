@@ -57,14 +57,13 @@ Edgar Santiago Ochoa Quiroga}
 \begin{document}
 \maketitle
 \begin{frame}{Introducción}
-Aqui una introduccion y resumen de lo que se hara
-
+    Uno de los problemas principales en el estudio de las superficies de Riemann es su clasificación, en particular hemos visto que una misma superficie puede tener dos estructuras complejas completamente diferentes, por lo que nos interesamos en caracterizar todas estas estructuras. A partir de este problema surgen los espacios de Moduli y Teichmüller, que por su estructura ayudan a clasificar todas las posibles estructuras complejas de una superficie dada. Nuestro propósito es hacer una breve introducción a éstos espacios, incluyendo algunas construcciones elementales.
 
 \end{frame}
 \begin{frame}{Preliminares Topología Algebraica}
 
     \begin{block}{Definición}
-        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topológico $X$, se dice que son \textbf{caminos homotopicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y además exisste una funcion continua $F:[0,1]\times[0,1]\to X$ tal que
+        Dos caminos $\gamma_1$ y $\gamma_2$ que envian el intervalo $[0,1]$ en un espacio topológico $X$, se dice que son \textbf{caminos homotopicos} si ambos tienen el mismo punto inicial $x_0$ y final $x_1$, y además existe una funcion continua $F:[0,1]\times[0,1]\to X$ tal que
         $$F(s,t)=\begin{cases}
         \gamma_1(s) & Si\,t=0,\\
         \gamma_2(s) & Si\,t=1,\\
@@ -127,7 +126,16 @@ Aqui una introduccion y resumen de lo que se hara
     \begin{block}{Proposicion}
         Sea $X$ una superficie de Riemann. El cubrimiento universal de $X$ es biholomorfo a $\C$ si y solo si $X$ es biholomorfo a $\C,\C-\{0\}$ o $\C/L$
     \end{block}
-    Resulta que donde tendremos una mayor variedad son los cocientes de $\Hs^2$, antes de eso veremos la siguiente construcción
+    Resulta que donde tendremos una mayor variedad son los cocientes de $\Hs^2$.
+\end{frame}
+\begin{frame}{Superficies Hiperbólicas}
+
+Los cocientes de $\Hs^2$ son lo que denominaremos como superficies hiperbólicas. Se tiene que $\Hs^2$ viene equipado con una métrica dada por
+$$ds^2=\dfrac{dx^2+dy^2}{y^2},$$
+ademas el grupo de automorfismos $PSL(2,\R)$ de $\Hs^2$, es justamente el grupo de isometrias que preservan la orientación de esta métrica.\\
+\vspace{0.3cm}
+\textbf{Observación:} Todos los cocientes de $\Hs^2$ que dan lugar a una superficie de Riemann heredan una métrica completa de curvatura constante $-1$, es decir una métrica hiperbólica. Mas aun toda métrica de la que se puede dotar una superficie da lugar a una superficie de Riemann.
+    
 \end{frame}
 \begin{frame}{Espacio de Teichmuller del Toro}
     En general un espacio de Teichmüller asociado a una superficie sera el espacio de superficies de Riemann \textit{marcadas} de aquella superficie, mientras que el espacio de Moduli sera el de clases de isomorfismo de estas estructuras.\\
@@ -149,12 +157,51 @@ Aqui una introduccion y resumen de lo que se hara
     Esto quiere decir que las estructuras de superficie de Riemann del toro están determinadas por la acción de $\text{SL}(2,\Z)$ sobre $\Hs^2$
 \end{frame}
 \begin{frame}
-    Sea $\mathcal{M}_1 = \Hs^2/\text{SL}(2,\Z) = \Hs^2/\text{PSL}(2,\Z)$ queremos ver como es la topología de este cociente. \textcolor{red}{aqui van las imagenes esas pero me da pereza}\\ 
-    $\mathcal{M}_1$ se denomina el espacio de móduli del toro y $\mathcal{T}_1 = \Hs^2 $ es el espacio de Teichmüller
-
+    Sea $\mathcal{M}_1 = \Hs^2/\text{SL}(2,\Z) = \Hs^2/\text{PSL}(2,\Z)$ queremos ver como es la topología de este cociente. 
+    \begin{block}{Definición}
+        Sea $G$ un grupo y $X$ espacio topologico. Si $G$ actua sobre $X$ definimos un dominio fundamental como un subespacio de $X$ cerrado tal que su interior contiene solo un elemento de cada orbita.
+    \end{block}
+    Con esta idea podemos estudiar la estructura del cociente presentado. Considere el conjunto 
+    $$\mathcal{F}=\left\{z\in\Hs^2:|z|\geq 1\text{ y } |Re(z)|\leq \frac{1}{2}\right\}.$$
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.4\linewidth]{Imagenes/FunDom.png}
+        \end{figure} 
+    
 \end{frame}
 \begin{frame}
-    Habiendo hecho esto, queremos generalizar éstos espacios a superficies de género más alto, vimos que fue sencillo construir los espacios de Teichmüller y móduli del toro debido a una particularidad muy especial, sin embargo, éstas particularidades pueden ser entendidas de otra manera, si tomamos $p_0 = [0] \in \C /L$, podemos ver que los segmentos $\overline{[0:1]}$ y $\overline{[0:\tau]}$ del plano complejo tienen asociados dos caminos cerrados que determinan dos generadores $[A_\tau],[B_\tau]$ de $\pi_1(\C /L,p_0)$, si además, tenemos $f: \C/L \rightarrow \C/L'$ un biholorfismo, el homomorfismo inducido $f_*: \pi_1(\C/L,p_0) \rightarrow \pi_1(\C/L', p_0)$ no necesariamente envía $[A_\tau],[B_\tau]$ a $[A_{\tau'}],[B_{\tau'}]$, de hecho ésto solo ocurre si $\tau = \tau'$. Ésta idea será la que nos ayudará a conseguir nuestro objetivo principal.  
+    Note que dado $\tau\in\Hs^2$ existe $g\in PSL(2,\Z)$ tal que $g\tau\in\mathcal{F}.$ Esto se tiene ya que dado tal $g$ un calculo nos muestra que
+    $$Im(gz)=\frac{Im(z)}{|cz+d|^2},$$
+    Podemos tomar $g$ tal que $Im(g\tau)$ es maximal y de hecho es maximo. Luego podemos trasladar por medio de $z\to z+1$ hasta que $|Re(g\tau)|\leq \dfrac{1}{2}.$ Si $|g\tau|<1$ entonces $\left|\dfrac{1}{g\tau}\right|>1$ y eso contradice la maximalidad de la parte imaginaria.\\
+    Podemos ver que
+    \begin{itemize}
+        \item Si $\tau\in Int(\mathcal{F})$ entonces $O(\tau)\cap\mathcal{F}=\{\tau\}.$ 
+        \item Si $Re(\tau)=\pm\dfrac{1}{2}$ entonces $O(\tau)\cap\mathcal{F}=\{\tau,\tau\mp1\}.$
+        \item Si $|\tau|=1$ entonces $O(\tau)\cap \mathcal{F}=\left\{\tau,-\dfrac{1}{\tau}\right\}.$
+    \end{itemize}
+    
+\end{frame}
+\begin{frame}
+    Asumamos que $z,gz\in\mathcal{F}$, luego asuma que $Im(gz)\geq Im(z)$, así $|cz+d|\leq 1,$ por la relación de antes. Como $|z|\geq 1$, tenemos que $c=\pm1,0.$\\
+
+    Si $c=0$, $d=\pm 1$ y por la condición sobre el determinante $gz=z+b$, luego $b=0,\pm 1$, si $b=0$ ya tenemos el primer caso. En cambio si $b=\mp 1$, tenemos que $Re(z)=\pm\dfrac{1}{2}.$\\
+
+    Por ultimo si $c=\pm 1$, forzosamente $d=0$ y $|z|=1$, asi $gz=-\dfrac{1}{z}.$\\
+
+    Concluimos que $\mathcal{M}_1$ es el espacio que resulta de identificar los bordes de $\mathcal{F}$
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.5\linewidth]{Imagenes/Empanada.png}
+        \end{figure} 
+
+    $\mathcal{M}_1$ se denomina el espacio de móduli del toro y $\mathcal{T}_1 = \Hs^2 $ es el espacio de Teichmüller
+\end{frame}
+\begin{frame}
+    Habiendo hecho esto, queremos generalizar éstos espacios a superficies de género más alto, vimos que fue sencillo construir los espacios de Teichmüller y móduli del toro debido a una particularidad muy especial, sin embargo, éstas particularidades pueden ser entendidas de otra manera, si tomamos $p_0 = [0] \in \C /L$, podemos ver que los segmentos $\overline{[0:1]}$ y $\overline{[0:\tau]}$ del plano complejo tienen asociados dos caminos cerrados que determinan dos generadores $[A_\tau],[B_\tau]$ de $\pi_1(\C /L,p_0)$, si además, tenemos $f: \C/L \rightarrow \C/L'$ un biholorfismo, el homomorfismo inducido $f_*: \pi_1(\C/L,p_0) \rightarrow \pi_1(\C/L', p_0)$ no necesariamente envía $[A_\tau],[B_\tau]$ a $[A_{\tau'}],[B_{\tau'}]$, de hecho ésto solo ocurre si $\tau = \tau'$. Ésta idea será la que nos ayudará a conseguir nuestro objetivo principal.
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.5\linewidth]{Imagenes/Marking.png}
+        \end{figure}  
 \end{frame}
 \begin{frame}{Marking}
     \begin{block}{Definición}
@@ -237,7 +284,7 @@ donde $z=x+iy$ y $w=u+iv.$ Geometricamente  estos representan transformaciones a
 $(du,dv).$\\
 
 De esta manera estas transformaciones envían círculos centrados en el origen en elipses similares, es de nuestro interés ver la razón entre los ejes y como cambia su dirección.    
-<<<<<<< HEAD
+
 \end{frame}
 
 \begin{frame}
@@ -274,7 +321,10 @@ Resulta mas conveniente considerar
         $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
         LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
     \end{block}
-    \textcolor{red}{aqui el dibujo del imayoshi tengo sueño}
+    \begin{figure}
+            \centering
+            \includegraphics[width=0.5\linewidth]{Imagenes/Semieje.png}
+        \end{figure}
 \end{frame}
 
 \begin{frame}{Relacion con el espacio de Teichmuller}
@@ -283,56 +333,81 @@ Resulta mas conveniente considerar
     es una función suave de valor complejo y ademas no depende de la coordenada local $w.$ Además $\mu_F$ cumple todas las condiciones de un coeficiente de Beltrami.
 \end{frame}
 \begin{frame}
-    Si $\{(U_\alpha,w_\alpha)\}$ es un atlas en $X$ y $f:R\rightarrow X$ es un difeomorfismo que preserva la orientación, la colección $\{(f^{-1}(V_\alpha),w_\alpha \circ f)\}$ es tambien un atlas en $R$, 
+    Si $\{(U_\alpha,w_\alpha)\}$ es un atlas en $X$ y $f:R\rightarrow X$ es un difeomorfismo que preserva la orientación, la colección $\{(f^{-1}(V_\alpha),w_\alpha \circ f)\}$ es tambien un atlas en $R$. En este sentido tenemos una nueva superficie de Riemann $R_f$ con el sistema de coordenadas dado previamente.\\
+    \vspace{0.3cm}
+    Podemos notar que la función identidad de $R$ a $R_f$ es un difeomorfismo que preserva la orientación. Luego tomando $f:R_f\to X$, este es un biholomorfismo, por lo que $(X,f)=(R_f,id),$ entonces el coeficiente de Beltrami $\mu_F$ nos dice que tanto hay que deformar una superficie en otra para obtener su estructura compleja. Asi podemos construir el espacio de Teichmuller a partir de los coeficientes de Beltrami.
+\end{frame}
+\begin{frame}{Espacios de coeficientes de Beltrami}
+
+    \begin{block}{Proposición}
+        Dadas superficies de Riemann $R,S,T,$ y difeomorfismos que preservan la orientación $f:R\to S$ y $g:S\to T$, se tiene la siguiente relación
+        $$\mu_g\circ f=\frac{f_z}{\overline{f_z}}\frac{\mu_{g\circ f}-\mu_f}{1-\overline{\mu_f}\cdot\mu_{g\circ f}}.$$ 
+        Es particular si tenemos difeomorfismos que preservan la orientación $f_1:R\to S_1$ y $f_2:R\to S_2$, la aplicacion $f_2\circ f_1^{-1}$ es biholomorfa si y solo si $\mu_{f_1}=\mu_{f_2}.$
+    \end{block}
+    Ahora construiremos el espacio de Teichmuller en terminos de los coeficientes de Beltrami de $X.$ Sea $B(X)_1$ el conjunto de los coeficientes de Beltrami de $X$, si equipamos a este conjunto con la norma $L^\infty$, hemos una definido una topología. 
+\end{frame}
+\begin{frame}
+    Consideramos la acción de $Diff^+(X)$ sobre $B(X)_1$, dada por
+    $$w^*(\mu_f)=\mu_{f\circ w^{-1}}=\left(\frac{w_z}{\overline{w_z}}\frac{\mu_f-\mu_w}{1-\overline{\mu_w}\mu_f}\right)\circ w^{-1},$$
+    \begin{block}{Teorema}
+        Dados difeomorfismos que preservan la orientación $f:X\to R$ y $g:X\to R^\prime$, existe una aplicacion biholomorfa $h:R\to R^\prime$ si y solo si existe $w\in Diff^+(X)$ tal que $\mu_g=w^*(\mu_f).$ Ademas $g^{-1}\circ h\circ f$ es homotopico a la identidad en $X$ si y solo si $w\in Diff_0^+(X).$ 
+    \end{block}
+    Esta relación nos dice como son las orbitas del cociente.
+    \begin{block}{Corolario}
+        La aplicación que envia $(R,f)$ a $\mu_f\in B(X)_1$ induce las siguientes identificaciones
+        \begin{align*}
+           \mathcal{T}(X)&\cong B(X)_1/Diff_0^+(X),\\
+           \mathcal{M}(X)&\cong B(X)_1/Diff^+(X). 
+        \end{align*}
+    \end{block}
+    Con esto hemos inducido una topología, que resulta independiente de la estructura compleja inicial de $X.$
+\end{frame}
+\begin{frame}{La métrica de Teichmuller}
+\begin{block}{Definición}
+    Sea $X$ una superficie de Riemann, entonces podemos definir una metrica sobre $\mathcal{T}(X)$ de la siguiente manera
+    $$d_T((R_1,f_1),(R_2,f_2))=\frac{1}{2}\log\left(\inf\left\{D_g:\begin{array}{c} g:R_1\to R_2 \text{ es un difeomorfismo que}\\\text{ preserva la orientación homotopico a}\\f_2\circ f_1^{-1}\end{array}\right\}\right).$$
+\end{block}
+Se puede observar que esta métrica resulta compatible con la topología dada anteriormente.\\
+
+Esta metrica resulta ser una generalizacion de lo que se conoce como \textit{el problema de Grotschz}.
     
 \end{frame}
-=======
-\end{frame}
 
-\begin{frame}
-    Observemos ahora si que podemos escribir
-    \begin{align*}
-        f_z&=\frac{1}{2}(u_x+u_y)+\frac{i}{2}(v_x-u_y),\\
-        f_{\overline{z}}&=\frac{1}{2}(u_x-v_y)+\frac{i}{2}(v_x+u_y).
-    \end{align*}
-    Con esto podemos notamos
-    $$|f_z|^2-|f_{\overline{z}}|^2=u_xv_y-u_yv_x=J.$$
-    Donde $J$ es el Jacobiano de la transformación. Como solo estamos considerando las aplicaciones que preservan la orientación, el Jacobiano es positivo, luego $|f_{\overline{z}}|<|f_z|$, de esto se sigue que
-    $$(|f_z|-|f_{\overline{z}}|)|dz|\leq |dw|\leq (|f_z|+|f_{\overline{z}}|)|dz|.$$
-    Donde ambos extremos de la desigualdad se alcanzan, asi obtenemos que la razon esta dada por
-    $$D_f=\frac{|f_z|+|f_{\overline{z}}|}{|f_z|-|f_{\overline{z}}|}\geq 1.$$
-    Esto se conoce como la \textbf{dilatación} en el punto $z$.
-\end{frame}
-
-\begin{frame}
-    \begin{block}{Definición}
-        La aplicación $f$ se dice \textbf{cuasiconforme} si $D_f$ es acotada.
-        \end{block}
-        Particularmente obtenemos que
-\begin{block}{Proposición}
-Si $D_f=1$ tenemos que $f$ es una aplicación \textbf{conforme}.
-\end{block}
-Resulta mas conveniente considerar
-    $$d_f=\frac{|f_{\overline{z}}|}{|f_z|}<1,$$
-    que se relaciona con $D_f$ tal que
-    $$D_f=\frac{1+d_f}{1-d_f}.$$
-\end{frame}
-\begin{frame}
-    \begin{block}{Definición}
-        La \text{dilatación compleja} esta dada por
-        $$\mu_f=\frac{f_{\overline{z}}}{f_z}.$$
-        LLamamos a $\mu_f$ el \textit{coeficiente de Beltrami de }$f.$
+\begin{frame}{Problema de Grotschz}
+    Sean $R,R^\prime$ dos rectángulos de lados $a,b$ y $a^\prime,b^\prime$ respectivamente. Queremos ver cual es la aplicación $f$ que enviá $R\to R^\prime$, que sea lo mas conforme posible, con conforme nos referimos a que la norma de la dilatación $D_f$ sea mínima.
+    \begin{block}{Teorema}
+        Sea 
+        $$f(z)=\frac{1}{2}\left(\frac{a^\prime}{a}+\frac{b^\prime}{b}\right)z+\frac{1}{2}\left(\frac{a^\prime}{a}-\frac{b^\prime}{b}\right)\overline{z},$$
+        entonces $f(z)$ es solución para el problema de Grotschz.
     \end{block}
-    \textcolor{red}{aqui el dibujo del imayoshi tengo sueño}
+    Note que esta funcion representa una transformacion afin que es 
+    $$f(x,y)=\left(\frac{a^\prime}{a}x,\frac{b^\prime}{b}y\right).$$
 \end{frame}
 
-\begin{frame}{Relacion con el espacio de Teichmuller}
-    Consideremos $(R,f)\in\mathcal{T}(X)$, es de nuestro interes comparar la estructura compleja de $R$ y $X$, para esto tomamos una vecindad $U$ y una coordenada local $z$ en $R$, de manera similar $V$ vecindad y $w$ coordenada local en $X.$ Si consideramos $F=w\circ f\circ z^{-1}$ entonces 
-    $$\mu_F=\frac{F_{\overline{z}}}{F_z},$$
-    es una función suave de valor complejo y ademas no depende de la coordenada local $w.$
-\end{frame}
->>>>>>> 158a6f6389349e79caab85ca04f1bb164ac18aa8
 \begin{frame}{Referencias}
+\begin{thebibliography}{9}
+
+\bibitem{ahlfors}
+L. V. Ahlfors, \textit{Lectures on Quasiconformal Mappings}, D. Van Nostrand Company, 1966.
+
+\bibitem{petri}
+B. Petri, \textit{Introduction to Teichmüller Theory. Lecture Notes}, 2024. disponible \href{https://webusers.imj-prg.fr/~bram.petri/teaching_tt_2425.html}{\textcolor{blue}{aquí}}
+
+\bibitem{Imayoshi}
+Y. Imayoshi, M. Taniguchi, \textit{An Introduction to Teichmüller Spaces}, Springer, 1992.
+
+\bibitem{Munkres}
+J. Munkres, \textit{Topology}, Pearson, 2014.
+
+\bibitem{abikoff}
+W. Abikoff, \textit{The Real Analytic Theory of Teichmüller Space}, Springer, 1980.
+
+\bibitem{hubbard}
+J. H. Hubbard, \textit{Teichmüller Theory and Applications to Geometry, Topology and Dynamics}, Vol. 1, Matrix Editions, 2006.
+
+
+\end{thebibliography}
+
 
 \end{frame}
 
